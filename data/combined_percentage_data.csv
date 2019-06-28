@@ -29,14 +29,16 @@
 374,obj1kr2,overgrowth,cityline satisfaction,34,65,34
 375,obj1kr2,potholes,cityline satisfaction,34,62,34
 281,obj2kr2,comm reno,approved in time,76,12,30
-294,obj2kr2,res reno,approved in time,25,13,30
-307,obj2kr2,res new,approved in time,95,14,30
-313,obj2kr2,comm new,approved in time,52,15,55
-323,obj2kr2,ROW road,approved in time,15,16,30
-211,obj2kr2,ROW CUT,approved in time,24,17,30
-336,obj2kr2,H&S violations,compliance perc,6,18,30
+294,obj2kr1,res reno,approved in time,25,13,30
+307,obj2kr1,res new,approved in time,95,14,30
+313,obj2kr1,comm new,approved in time,52,15,55
+323,obj2kr1,ROW road,approved in time,15,16,30
+211,obj2kr1,ROW CUT,approved in time,24,17,30
+336,obj2kr1,H&S violations,compliance perc,6,18,30
 346,obj2kr2,other violations,compliance perc,2,19,30
 356,obj2kr2,census tract calls,perc change in calls,34,20,30
+356,obj2kr3,census tract calls,perc change in calls,34,20,30
+
 396,obj4kr1,potholes,potholes,34,100,100
 404,obj4kr1,no_heat,no_heat,50,90,90
 412,obj4kr1,trash,trash,34,88,88
