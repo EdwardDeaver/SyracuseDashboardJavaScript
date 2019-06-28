@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Objective: Increase economic investment and neighborhood stability</title>
+    <!-- Custom CSS-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <!-- font awesome-->
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-66477210-5">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-66477210-5');
+    </script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0">
+    </script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js">
+    </script>
+    <script src="https://d3js.org/d3-array.v2.min.js">
+    </script>
+    <!-- CUSTOM SCRIPTS-->
+
+    <script src="JS/scripts.js">
+    </script>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">City of Syracuse <i class="fas fa-chart-line"></i></a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="objective1.html">Fiscal Sustainability <i class="fas fa-hand-holding-usd"></i></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="objective2.html">Neighborhood Stability <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="objective3.html">Constituent Engagement <i class="fas fa-comments"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="objective4.html">City Services <i class="fas fa-screwdriver"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://innovatesyracuse.com/performance" target="_blank">Successes <i class="far fa-thumbs-up success"></i></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="keyterms.html">Key Terms <i class="fas fa-book-open"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Dashboard Key Terms:</h1>
+            <p class="lead">Below are key terms mentioned in the Performance Management Program Dashboard. This list will continue to grow over time.
+            </p>
+        </div>
+    </div>
+    <!-- Main content -->
+    <div class="container DataContainer">
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Allotment:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p> the amount of money that is planned to be spent in each budget line, each month</p>
+
+                </div>
+            </div>
+        </a>
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Budget deficit:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p> when expenses exceed revenue.</p>
+
+                </div>
+            </div>
+        </a>
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Budget variance:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p>the difference between the budgeted amount of an expense and the actual amount of the expense.</p>
+
+                </div>
+            </div>
+        </a>
+
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Cityline:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p>Syracuse’s citizen reporting tool that can be reached at cityline.syrgov.net or 315-448-CITY.</p>
+
+                </div>
+            </div>
+        </a>
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Compliance:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p>the act of addressing and fixing code violations.</p>
+
+                </div>
+            </div>
+        </a>
+
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Economic investment:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p> the amount of money put into projects within the City of Syracuse.</p>
+
+                </div>
+            </div>
+        </a>
+
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Issuance time:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p> the length of time it takes to respond to or resolve a reported issue.</p>
+
+                </div>
+            </div>
+        </a>
+
+        <a class="nav-link">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot yellowdot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1><span class="category-title">Neighborhood stability:</span></h1>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <p>physical, economic or social features of the neighborhood that are associated with the preservation and potential increase in the value of property within it.</p>
+
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <br>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <small>Copyright 2019 &copy; <a href="http://www.syrgov.net/home.aspx" target="_blank">City of Syracuse</a></small>
+        </div>
+    </footer>
+
+</body>
+
+</html>

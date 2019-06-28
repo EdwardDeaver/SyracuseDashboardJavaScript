@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Objective: Increase economic investment and neighborhood stability</title><!-- Custom CSS-->
+	<link href="css/style.css" rel="stylesheet"><!-- Bootstrap -->
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+	<script src="https://www.googletagmanager.com/gtag/js?id=UA-66477210-5">
+	</script>
+	<script>
+	       window.dataLayer = window.dataLayer || [];
+
+	       function gtag() {
+	           dataLayer.push(arguments);
+	       }
+	       gtag('js', new Date());
+
+	       gtag('config', 'UA-66477210-5');
+    </script>
+
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0">
+	</script> 
+	<script src="https://d3js.org/d3-dsv.v1.min.js">
+	</script> 
+	<script src="https://d3js.org/d3-array.v2.min.js">
+	</script> <!-- CUSTOM SCRIPTS-->
+	 
+	<script src="JS/scripts.js">
+	</script> <!-- Navigation Bar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index.html">City of Syracuse <i class="fas fa-chart-line"></i></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="objective1.html">Fiscal Sustainability <i class="fas fa-hand-holding-usd"></i></a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="objective2.html">Neighborhood Stability <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="objective3.html">Constituent Engagement <i class="fas fa-comments"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="objective4.html">City Services <i class="fas fa-screwdriver"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://innovatesyracuse.com/performance" target="_blank">Successes <i class="far fa-thumbs-up success"></i></a>
+				</li>
+				<li class="nav-item">
+                        <a class="nav-link" href="keyterms.html">Key Terms <i class="fas fa-book-open"></i></a>
+                    </li>
+			</ul>
+		</div>
+	</nav><!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4">Objective: Provide quality constituent engagement and response</h1>
+			<p class="lead"><h1> NOTE: THIS WEBSITE IS USING SAMPLE DATA </h1><br>The community is an important part of how we govern. To ensure the community can easily interact with city officials, we are identifying and improving ways that the community voice can be heard early and frequently. City government will work to provide quality constituent engagement and response to improve our public engagement strategies.</p>
+		</div>
+	</div><!-- Main content -->
+	<div class="container DataContainer" name="keyResult1">
+		<div class="row">
+			<div class="col-md-12">
+				<h2><span class="category-title">Key Result: Increase social media engagement by 20%</span></h2>
+				<h4>Overall change in engagement over the last 30 days: <span class="keyResultBanner category-title"><span class="dataSectpercentData"></span>% Change </span></h4><br>
+			</div>
+		</div><!-- Start of Data -->
+		 <a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR1/Commercial_renovation.html">
+		<div class="row">
+			<div class="col-md-1">
+				<div>
+					<span class="dot"></span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<p><span class="category-title">Reactions</span>:<br>
+				<span class="category-title-alt">Facebook, Twitter, Instagram, and Linkedin reactions in the past 30 days</span>:  <span class="category-title"><span class="dataSectNumerator"></span>  <span class="dataSectDenominator"></span></span></p>
+			</div>
+			<div class="col-md-3">
+				<h2><span class="percentOnTime"></span>% On-time</h2>
+			</div>
+			<div class="col-md-4 chart-container">
+				<div class="miniChartsJS">
+					<canvas id="c1"></canvas>
+				</div>
+			</div>
+		</div></a>  <a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR1/Commercial_renovation.html">
+            <div class="row">
+                <div class="col-md-1">
+                    <div>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p><span class="category-title">Comments</span>:<br>
+                    <span class="category-title-alt">Facebook, Twitter, Instagram, and Linkedin reactions in the past 30 days</span>:  <span class="category-title"><span class="dataSectNumerator"></span>  <span class="dataSectDenominator"></span></span></p>
+                </div>
+                <div class="col-md-3">
+                    <h2><span class="percentOnTime"></span>% On-time</h2>
+                </div>
+                <div class="col-md-4 chart-container">
+                    <div class="miniChartsJS">
+                        <canvas id="c2"></canvas>
+                    </div>
+                </div>
+            </div></a> 
+            <a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR1/Commercial_renovation.html">
+                <div class="row">
+                    <div class="col-md-1">
+                        <div>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p><span class="category-title">Shares</span>:<br>
+                        <span class="category-title-alt">Facebook, Twitter, Instagram, and Linkedin reactions in the past 30 days</span>:  <span class="category-title"><span class="dataSectNumerator"></span>  <span class="dataSectDenominator"></span></span></p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2><span class="percentOnTime"></span>% On-time</h2>
+                    </div>
+                    <div class="col-md-4 chart-container">
+                        <div class="miniChartsJS">
+                            <canvas id="c3"></canvas>
+                        </div>
+                    </div>
+                </div></a>
+	</div><br>
+	<div class="container DataContainer"  name="keyResult2">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-md-12">
+                    <h2><span class="category-title">Key Results: Achieve 90% survey satisfaction from constituents using Cityline</span></h2>
+
+			</div>
+		</div><a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR2/Code_Compliance.html">
+		<div class="row">
+			<div class="col-md-1">
+				<div>
+					<span class="dot"></span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<p>Survey responses with a score of 7 or higher in the 30-day period ending <span class="Date"></span>: 
+            
+                        <span class="category-title"><span class="dataSectNumerator"></span> out of <span class="dataSectDenominator"></span></span></p>
+			</div>
+			<div class="col-md-3">
+				<h2><span class="percentOnTime"></span>% Compliance</h2>
+			</div>
+			<div class="col-md-4">
+				<div class="miniChartsJS">
+					<canvas id="c4"></canvas>
+				</div>
+			</div>
+		</div></a>
+	</div><br>
+	<div class="container DataContainer" name="keyResult3">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-md-12">
+                    <h2><span class="category-title">Key Result: Improve equity of Cityline use by 20%</span></h2>
+                    <br>
+                    <h5>Our goal is to increase the number of calls to Cityline in the 10 census tracts with the lowest call volume.</h5>
+                    <br>
+                    <h5>The percent change in Cityline calls for all census tracts between 2018 and 2019 for the 30-day period ending  <span class="Date"></span>:  <span class="category-title"><span class="dataSectNumerator"></span></span></h5>
+                
+                </div>
+		</div><a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR3/QOL_Pilot_Area.html">
+		<div class="row">
+			<div class="col-md-1">
+				<div>
+					<span class="dot"></span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<p><span class="category-title">Total responses in the 30 day period<br>
+				ending <span class="Date"></span></span>:<br>
+				2018: <span class="category-title"><span class="dataSectNumerator"></span></span><br>
+				2019: <span class="category-title"><span class="dataSectDenominator"></span></span></p>
+			</div>
+			<div class="col-md-3">
+				<h2><span class="percentOnTime"></span>% Change</h2>
+			</div>
+			<div class="col-md-4">
+				<div class="miniChartsJS">
+					<canvas id="c5"></canvas>
+				</div>
+			</div>
+		</div></a>
+	</div>
+	<footer class="footer">
+		<div class="container text-center">
+			<small>Copyright 2019 &copy; <a href="http://www.syrgov.net/home.aspx" target="_blank">City of Syracuse</a></small>
+		</div>
+	</footer>
+	<script>
+		
+
+		generateKeyResult('obj3kr1', "keyResult1", 1);
+		generateKeyResult('obj3kr2', "keyResult2", 2);
+		generateKeyResult('obj3kr3', "keyResult3", 2);
+
+		
+	
+	/* NEXT SETPS GET THE filtering of a array group in the 2nd getData into it's own function and set those as variables in the geerate */
+
+	</script>
+	        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
+
+</body>
+</html>

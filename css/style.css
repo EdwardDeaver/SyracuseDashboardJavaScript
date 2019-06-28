@@ -1,0 +1,272 @@
+.knitr .inline {
+	background-color: #f7f7f7;
+	border: solid 1px #B0B0B0;
+}
+
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.warning {
+	font-weight: bold;
+}
+
+.message {
+	font-style: italic;
+}
+
+.source,
+.output,
+.warning,
+.error,
+.message {
+	padding: 0 1em;
+	border: solid 1px #F7F7F7;
+}
+
+.source {
+	background-color: #f5f5f5;
+}
+
+.rimage .left {
+	text-align: left;
+}
+
+.rimage .right {
+	text-align: right;
+}
+
+.rimage .center {
+	text-align: center;
+}
+
+.hl.num {
+	color: #AF0F91;
+}
+
+.hl.str {
+	color: #317ECC;
+}
+
+.hl.com {
+	color: #AD95AF;
+	font-style: italic;
+}
+
+.hl.opt {
+	color: #000000;
+}
+
+.hl.std {
+	color: #585858;
+}
+
+.hl.kwa {
+	color: #295F94;
+	font-weight: bold;
+}
+
+.hl.kwb {
+	color: #B05A65;
+}
+
+.hl.kwc {
+	color: #55aa55;
+}
+
+.hl.kwd {
+	color: #BC5A65;
+	font-weight: bold;
+}
+
+.table {
+	border-radius: 5px;
+	width: 50%;
+	margin: 0px auto;
+	float: none;
+}
+
+#center {
+	text-align: center;
+}
+
+#jumbotronbg {
+	background-color: #3c2d5a;
+}
+
+#mapid {
+	height: 180px;
+}
+
+#notes-border {
+	border: 1px black;
+}
+
+table.myTable {
+	border-collapse: collapse;
+}
+
+#inner {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.HeaderTitle {
+	color: white;
+}
+
+.card {
+	margin: 0 auto;
+	/* Added */
+	float: none;
+	/* Added */
+	margin-bottom: 10px;
+	/* Added */
+	height: 300px;
+	width: 232px;
+	text-align: center;
+	border-style: solid;
+	border-width: 10px;
+}
+
+.success {
+	color: green;
+}
+
+.category-title {
+	font-weight: bold;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+	background-color: #3c2d5a;
+	border-color: #ffffff;
+}
+
+table.myTable tr {
+	border: 1px solid red;
+}
+
+.initiative-department {
+	font-size: 20px;
+	color: steelblue;
+}
+
+.card-green {
+	border-style: solid;
+	border-width: 15px;
+	border-color: green;
+	background-color: lightgreen;
+}
+
+.card-red {
+	border-color: red;
+	background-color: lightpink;
+}
+
+.card-yellow {
+	border-color: yellow;
+	background-color: lightyellow;
+}
+
+.mytable>thead>tr>td {
+	padding-bottom: 10px;
+}
+
+.card-heading {
+	font-size: 25px;
+}
+
+.card-metric {
+	color: blue;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.card-description {
+	font-size: 17px;
+	color: grey;
+}
+
+.card-progress {
+	font-size: 20px;
+}
+
+.table th,
+.table td {
+	border-top: none !important;
+}
+
+
+.var-perc {
+	text-align: center;
+}
+
+
+.card-body {
+	height: 246px;
+}
+
+.card-title {
+	height: 57px;
+	margin-bottom: 0px;
+}
+
+.card {
+	border-color: black;
+}
+
+.btn {
+	width: 250px;
+}
+
+.card-header {
+	font-weight: bold;
+}
+
+.text-grey {
+	color: grey;
+}
+
+.dot {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.greendot {
+	background-color: #28a745;
+}
+
+.yellowdot {
+	background-color: #ffc107;
+}
+
+.reddot {
+	background-color: #dc3545;
+}
+
+.nav-link {
+	color: black;
+}
+
+.miniChartsJS {
+	min-width: 310px;
+	height: 80px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.container a:not(:last-child) {
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.category-title-alt{
+  font-style: italic;
+}
+nav div ul .active{
+  border-bottom:1px solid #000000 ;
+}
