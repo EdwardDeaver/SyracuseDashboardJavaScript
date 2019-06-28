@@ -5,5 +5,5 @@ CSS:
 Bootstrap + Bootstrap.Native to replace depdency on JQuery
 
 JS:
-ChartJS, D3, Vanilla
+ChartJS, D3Array + D3DSV, Vanilla
 
