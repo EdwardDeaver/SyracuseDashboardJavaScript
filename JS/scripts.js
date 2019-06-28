@@ -1,9 +1,9 @@
         
 async function generateKeyResult(key, TargetName,  mode){
             //For some unkown reason if KeyResult is called later it breaks the whole asynchronous thing and nothing works. 
-            var combinationData =  await getData('../data/combined_data_v2.csv').then(async function(data) {return data;});
-            var keyResultBanner =  await getData('../data/keyResultBanerData.csv').then(async function(data) {return data;});
-            var combinedPercentData = await getData('../data/combined_percentage_data.csv').then(async function(data){return data;});
+            var combinationData =  await getData('data/combined_data_v2.csv').then(async function(data) {return data;});
+            var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
+            var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
 
             //console.log("data from generateobjectiv1", combinationData);
             combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
