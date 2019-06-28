@@ -16,14 +16,7 @@
 432,obj1kr1,overgrowth,overgrowth,34,88,88
 436,obj1kr1,potholes,potholes,98,68,68
 445,obj1kr1,sewer,sewer,34,88,88
-454,obj1kr1,blue bins,blue bins,34,87,87
-463,obj1kr1,water mains,water mains,34,88,88
-472,obj1kr1,trash,trash,34,86,86
-481,obj1kr1,overgrowth,overgrowth,34,85,85
-490,obj1kr1,malfunctioning alarms,malfunctioning alarms,34,78,78
-366,obj1kr1,Comments,comments,52,-32,76
-367,obj1kr1,Reactions,comments,15,-54,25
-368,obj1kr1,Shares,reactions,24,25,95
+
 372,obj1kr2,fire_response,cityline satisfaction,34,45,6
 373,obj1kr2,police_response,cityline satisfaction,50,61,2
 374,obj1kr2,overgrowth,cityline satisfaction,34,65,34
