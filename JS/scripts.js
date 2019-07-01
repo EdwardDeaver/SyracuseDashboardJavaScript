@@ -1,4 +1,7 @@
-        
+       // Fiscal Year Data
+       // July = 1
+       // January == 7
+
 async function generateKeyResult(key, TargetName,  mode){
             //For some unkown reason if KeyResult is called later it breaks the whole asynchronous thing and nothing works. 
             var combinationData =  await getData('data/combined_data_v2.csv').then(async function(data) {return data;});
@@ -187,7 +190,7 @@ var start = 0;
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            display: true,
+                            display: false,
                             min: -100,
                             suggestedMax: 100
                         },
@@ -239,11 +242,28 @@ var start = 0;
         function splitData(dataSet, keyValue) {
             var dateInArray = [];
             var dataInArray = [];
+            var months = ["July", "August", "September", "October", "November", "December","January", "February", "March", "April", "May", "June"];
             for (index = 0; index < dataSet.length; index++) { 
                 dataInArray.push(dataSet[index].value);
                 dateInArray.push(dataSet[index].date_or_period); 
                 } 
             dataInArray2 = dataInArray.map(Number);
+            dateInArray = dateInArray.map(Number);
+            //console.log(dateInArray);
+            if(dateInArray[dateInArray.length-1]<=12){
+                for(i = 0; i<dateInArray.length; i++){
+                    dateInArray[i] = months[i];
+                    console.log(dateInArray[i]);
+                }
+            }
+            else{
+                for(i=0;i<dateInArray.length;i++){
+                    d =  new Date(dateInArray[i]*1000);
+                    dateInArray[i] = (d.getMonth()+1) + '/' + d.getDate() + '/'+ d.getFullYear();
+                    console.log(dateInArray[i]);
+                }
+            }
+            console.log(dateInArray);
             return [dateInArray, dataInArray2];
         };
         // Function: Gets the Text data of object from url
