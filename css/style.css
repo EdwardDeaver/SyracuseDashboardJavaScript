@@ -256,7 +256,7 @@ table.myTable tr {
 
 .miniChartsJS {
 	min-width: 310px;
-	height: 80px;
+	height: 100%;
 	margin: 0px auto;
 	overflow: hidden;
 }

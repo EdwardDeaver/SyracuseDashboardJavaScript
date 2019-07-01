@@ -178,6 +178,7 @@ var start = 0;
                             color: "black"
                         },
                         scaleLabel: {
+                            beginAtZero: true,
                             display: displayXScale,
                             labelString: XscaleLabelName,
                             fontColor: "red"
@@ -185,9 +186,10 @@ var start = 0;
                     }],
                     yAxes: [{
                         ticks: {
-                            display: displayYTicks,
+                            beginAtZero: true,
+                            display: true,
                             min: -100,
-                            max: 100
+                            suggestedMax: 100
                         },
                         gridLines: {
                             drawBorder: displayBorderGridLinesYAxis,
