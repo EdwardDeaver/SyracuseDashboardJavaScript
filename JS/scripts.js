@@ -190,7 +190,7 @@ var start = 0;
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            display: false,
+                            display: true,
                             min: -100,
                             suggestedMax: 100
                         },
