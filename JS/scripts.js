@@ -2,7 +2,7 @@
        // July = 1
        // January == 7
 
-async function generateKeyResult(key, TargetName,  mode, combinationData, keyResultBanner, combinedPercentData){
+async function generateKeyResult(key, TargetName,  mode, keyMode, combinationData, keyResultBanner, combinedPercentData){
             //For some unkown reason if KeyResult is called later it breaks the whole asynchronous thing and nothing works. 
            // var combinationData =  await getData('data/combined_data_v2.csv').then(async function(data) {return data;});
           //  var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
@@ -33,8 +33,15 @@ async function generateKeyResult(key, TargetName,  mode, combinationData, keyRes
             ArrayofKeyResults = await getCategoryDeptValues(keyResultBannerCSV, mode).then(async function(data){return data;});
             //console.log("Data Containers",  DataContainerElemenets.getElementsByClassName("dataSectpercentData"));
             //console.log("Array of Resukts", ArrayofKeyResults);
-            setIndicators(ArrayofKeyResults,  DataContainerElemenets.getElementsByClassName("dataSectpercentData"), "number");
+            if(keyMode == 1){
+                setIndicators(ArrayofKeyResults[0],  DataContainerElemenets.getElementsByClassName("dataSectpercentData"), "number");
+            }
+            if(keyMode ==2){
+                setIndicators(ArrayofKeyResults[0],  DataContainerElemenets.getElementsByClassName("dataSectpercentData"), "number");
+                setIndicators(ArrayofKeyResults[1],  DataContainerElemenets.getElementsByClassName("dataSectNumeratorData"), "number");
+                setIndicators(ArrayofKeyResults[2],  DataContainerElemenets.getElementsByClassName("dataSectDenominatorData"), "number");
 
+            }
             if(mode==1){
                 setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
                 setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color");
@@ -44,7 +51,7 @@ async function generateKeyResult(key, TargetName,  mode, combinationData, keyRes
                 setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
                 setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color");
                 setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
-                setIndicators(ArrayOfValues[2], document.getElementsByName(TargetName)[0].getElementsByClassName("dataSectNumerator"), "number");
+                setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
             }
 
 

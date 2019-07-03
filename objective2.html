@@ -78,7 +78,7 @@
 			<div class="col-md-12">
 				<h2><span class="category-title">Key Result: 95% of permits and zoning approvals will be issued on-time
 				</span></h2>
-				<h4>Overall percent of permits approved on-time during the last 30 days: 70% On-time (42 out of 60)<span class="keyResultBanner category-title"><span class="dataSectpercentData"></span>% Change </span></h4><br>
+				<h4>Overall percent of permits approved on-time during the last 30 days: <span class="dataSectpercentData"></span>% on-time (<span class="dataSectNumeratorData"></span> out of <span class="dataSectDenominatorData"></span>)</h4><br>
 			</div>
 		</div><!-- Start of Data -->
 		 <a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR1/Commercial_renovation.html">
@@ -324,9 +324,9 @@ period ending June 24: <span class="category-title"><span class="dataSectNumerat
 			var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
 			var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
 			var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
-			await generateKeyResult('obj2kr1', "keyResult1", 2,  combinationData, keyResultBanner, combinedPercentData);
-			await generateKeyResult('obj2kr2', "keyResult2", 1,  combinationData, keyResultBanner, combinedPercentData);
-			await generateKeyResult('obj2kr3', "keyResult3", 2,  combinationData, keyResultBanner, combinedPercentData);
+			await generateKeyResult('obj2kr1', "keyResult1", 2,2,  combinationData, keyResultBanner, combinedPercentData);
+			await generateKeyResult('obj2kr2', "keyResult2", 1,1,  combinationData, keyResultBanner, combinedPercentData);
+			await generateKeyResult('obj2kr3', "keyResult3", 2,1,  combinationData, keyResultBanner, combinedPercentData);
 
 		};
 		dataRun();
