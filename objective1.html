@@ -310,7 +310,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Executive</span>:<br>
+					<span class="category-title">Law</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -337,7 +337,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Finance</span>:<br>
+					<span class="category-title">Sewers</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -364,7 +364,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Fire</span>:<br>
+					<span class="category-title">DPW</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -391,7 +391,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Law</span>:<br>
+					<span class="category-title">Executive</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -418,7 +418,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Neighborhood and Business Development (NBD)</span>:<br>
+					<span class="category-title">Finance</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -445,7 +445,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Parks</span>:<br>
+					<span class="category-title">Fire</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -472,7 +472,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Police</span>:<br>
+					<span class="category-title">Neighborhood and Business Development (NBD)</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -499,7 +499,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Public Works</span>:<br>
+					<span class="category-title">Parks</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -526,7 +526,7 @@
                     </div>
                                    		<div class="col-md-4">
 				<p>
-					<span class="category-title">Sewer</span>:<br>
+					<span class="category-title">Police</span>:<br>
 					<span class="category-title-alt"></span> Amount Spent:  
               		<span class="category-title"><span class="dataSectNumerator"></span></span>
               		<br>
@@ -543,7 +543,34 @@
 					<canvas id="c17"></canvas>
 				</div>
 			</div>
-                </div></a>
+				</div></a>
+				<a class="nav-link" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/In_Depth_Pages/Objective_2/KR1/Commercial_renovation.html">
+					<div class="row">
+						<div class="col-md-1">
+							<div>
+								<span class="dot"></span>
+							</div>
+						</div>
+											   <div class="col-md-4">
+					<p>
+						<span class="category-title">Water</span>:<br>
+						<span class="category-title-alt"></span> Amount Spent:  
+						  <span class="category-title"><span class="dataSectNumerator"></span></span>
+						  <br>
+						 Amount Allotted: 
+						  <span class="category-title"><span class="dataSectDenominator"></span></span></span></p>
+				</div>
+				<div class="col-md-3">
+					<h2>
+						<span class="percentOnTime"></span>% Variance
+					</h2>
+				</div>
+				<div class="col-md-4 chart-container">
+					<div class="miniChartsJS">
+						<canvas id="c18"></canvas>
+					</div>
+				</div>
+					</div></a>
                 
 	</div><br>
 	
@@ -555,9 +582,13 @@
 	</footer>
 	-->
 	<script>
-
-   
-		generateKeyResult('obj1kr1', "keyResult1", 2);
+			async function dataRun(){ 
+				var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
+            	var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
+            	var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
+				await generateKeyResult('obj1kr1', "keyResult1", 2,  combinationData, keyResultBanner, combinedPercentData);
+			};
+			dataRun();
 		//generateKeyResult('obj1kr2', "keyResult2", 1);
 
 

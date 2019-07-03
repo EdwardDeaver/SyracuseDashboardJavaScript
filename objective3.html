@@ -81,7 +81,7 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<p><span class="category-title">Reactions</span>:<br>
+				<p><span class="category-title">Comments</span>:<br>
 				<span class="category-title-alt">Facebook, Twitter, Instagram, and Linkedin reactions in the past 30 days</span>:  <span class="category-title"><span class="dataSectNumerator"></span>  <span class="dataSectDenominator"></span></span></p>
 			</div>
 			<div class="col-md-3">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p><span class="category-title">Comments</span>:<br>
+                    <p><span class="category-title">Reactions</span>:<br>
                     <span class="category-title-alt">Facebook, Twitter, Instagram, and Linkedin reactions in the past 30 days</span>:  <span class="category-title"><span class="dataSectNumerator"></span>  <span class="dataSectDenominator"></span></span></p>
                 </div>
                 <div class="col-md-3">
@@ -204,17 +204,20 @@
 	</footer>
 	-->
 	<script>
-		
+		async function dataRun(){ 
+			var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
+			var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
+			var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
+			await generateKeyResult('obj3kr1', "keyResult1", 1,  combinationData, keyResultBanner, combinedPercentData);
+			await generateKeyResult('obj3kr2', "keyResult2", 2,  combinationData, keyResultBanner, combinedPercentData);
+			await generateKeyResult('obj3kr3', "keyResult3", 2,  combinationData, keyResultBanner, combinedPercentData);
 
-		generateKeyResult('obj3kr1', "keyResult1", 1);
-		generateKeyResult('obj3kr2', "keyResult2", 2);
-		generateKeyResult('obj3kr3', "keyResult3", 2);
+		};
+		dataRun();
+	//generateKeyResult('obj1kr2', "keyResult2", 1);
 
-		
-	
-	/* NEXT SETPS GET THE filtering of a array group in the 2nd getData into it's own function and set those as variables in the geerate */
 
-	</script>
+</script>
 	        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
 
 </body>

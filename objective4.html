@@ -445,11 +445,20 @@
     </footer>
     -->
 
-    <script>
-        generateKeyResult('obj4kr1', "keyResult1", 2);
-        generateKeyResult('obj4kr2', "keyResult2", 2);
+	<script>
+        async function dataRun(){ 
+            var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
+            var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
+            var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
+            await generateKeyResult('obj4kr1', "keyResult1", 1,  combinationData, keyResultBanner, combinedPercentData);
+            await generateKeyResult('obj4kr2', "keyResult2", 1,  combinationData, keyResultBanner, combinedPercentData);
 
-    </script>
+        };
+        dataRun();
+    //generateKeyResult('obj1kr2', "keyResult2", 1);
+
+
+</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
 
     </body>

@@ -2,11 +2,11 @@
        // July = 1
        // January == 7
 
-async function generateKeyResult(key, TargetName,  mode){
+async function generateKeyResult(key, TargetName,  mode, combinationData, keyResultBanner, combinedPercentData){
             //For some unkown reason if KeyResult is called later it breaks the whole asynchronous thing and nothing works. 
-            var combinationData =  await getData('data/combined_data_v2.csv').then(async function(data) {return data;});
-            var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
-            var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
+           // var combinationData =  await getData('data/combined_data_v2.csv').then(async function(data) {return data;});
+          //  var keyResultBanner =  await getData('data/keyResultBanerData.csv').then(async function(data) {return data;});
+            //var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
 
             //console.log("data from generateobjectiv1", combinationData);
             combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
@@ -18,8 +18,8 @@ async function generateKeyResult(key, TargetName,  mode){
             
             combinedPercentDataCSV = d3.group(await d3.csvParse(combinedPercentData), d => d.OKR, d => d.Name);
             combinedCSV = combinedPercentDataCSV.get(key).get(undefined);
-
-            //console.log("Combined Percent Data",combinedCSV );
+            
+            console.log("Combined Percent Data",combinedCSV );
             ArrayOfValues = await getCategoryDeptValues(combinedCSV, mode).then(async function(data){return data;});
             //console.log("Array of Values", ArrayOfValues);
             //console.log("document",DataContainerElemenets.getElementsByClassName("percentOnTime"));
@@ -62,11 +62,26 @@ async function generateKeyResult(key, TargetName,  mode){
                 //console.log(DataFromObject);
                 //console.log(ArrayOfValues);
                 //console.log(index);
-                //console.log(DataContainer[start].id);
+                //console.log("DataContainer ID", DataContainer[start].id);
+                console.log(index.includes("_") ); 
+                console.log
+                if(index.includes("_") ){
+                    console.log(index);
+                    index= index.substr(0, index.lastIndexOf("_"));
+                    console.log(index);
 
-                ChartJSGenrate(ArrayOfValues[0], ArrayOfValues[1], 'line',  DataContainer[start].id, index, 'Percent fixed',index, false, false, false, false, false, false, false, false, false, 22);
+                }
+               try{
+                    ChartJSGenrate(ArrayOfValues[0], ArrayOfValues[1], 'line',  DataContainer[start].id, index, 'Percent fixed',index, false, false, false, false, false, false, false, false, false, 22);
                   start = start +1;   
-           });
+               }
+               catch(error){
+                   console.log(error.message);
+                   start = start +1;   
+               }
+
+                
+                                    });
     }
 
     async function getCategoryDeptValues(data, mode){
@@ -191,8 +206,8 @@ var start = 0;
                         ticks: {
                             beginAtZero: true,
                             display: true,
-                            min: -100,
-                            suggestedMax: 100
+                            suggestedMin: 0,
+                            suggestedMax: 100,
                         },
                         gridLines: {
                             drawBorder: displayBorderGridLinesYAxis,
