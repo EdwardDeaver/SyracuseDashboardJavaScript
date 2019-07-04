@@ -293,9 +293,9 @@ var start = 0;
         // TYPE: ASYNC
         // Return: Text Data Object
         async function getData(url) {
-            const response = await fetch(url, {cache: "no-cache"}).then(async function(response) { return await response.text() });
-   //     const data = await response.text();
-     //       return data;
+            const response = await fetch(url, {cache: "no-cache"});
+             const data = await response.text();
+            return data;
         };
         
 
