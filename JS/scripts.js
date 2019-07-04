@@ -136,7 +136,7 @@ var start = 0;
         // URL: String type
         // Type: ASYNC
         async function getData(url) {
-            const response = await fetch(url);
+            const response = await fetch(url); 
             const data = await response.text();
 
             return data;
