@@ -293,8 +293,7 @@ var start = 0;
         // TYPE: ASYNC
         // Return: Text Data Object
         async function getData(url) {
-            const response = await fetch(url, {cache: "no-cache"})
-    .then(function(response) { return response.text() });
+            const response = await fetch(url, {cache: "no-cache"}).then(function(response) { return response.text() });
    //         const data = await response.text();
      //       return data;
         };
