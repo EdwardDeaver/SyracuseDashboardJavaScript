@@ -147,7 +147,7 @@ var start = 0;
             var data2 = await getData(url2);
             var data3 = await getData(url3);
             return [data1, data2, data3];
-        };
+        }; 
         // Function: Generates a Chart JS Chart
         // xAxisLabel - Array of lables
         // xAxis - Array of labels for the x axis
