@@ -293,7 +293,7 @@ var start = 0;
         // TYPE: ASYNC
         // Return: Text Data Object
         async function getData(url) {
-            const response = await fetch(url);
+            const response = await fetch(url, {cache: "reload"});
 
             const data = await response.text();
             return data;
