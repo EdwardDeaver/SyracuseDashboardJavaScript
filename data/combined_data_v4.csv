@@ -1,440 +1,440 @@
-"","OKR","date_or_period","category_or_dept","variable","value"
-"1","obj1kr1",1,"Assessment","budget variance",22
-"2","obj1kr1",2,"Assessment","budget variance",37
-"3","obj1kr1",3,"Assessment","budget variance",6
-"4","obj1kr1",4,"Assessment","budget variance",-8
-"5","obj1kr1",5,"Assessment","budget variance",39
-"6","obj1kr1",6,"Assessment","budget variance",2
-"7","obj1kr1",7,"Assessment","budget variance",-37
-"8","obj1kr1",8,"Assessment","budget variance",-6
-"9","obj1kr1",9,"Assessment","budget variance",4
-"10","obj1kr1",10,"Assessment","budget variance",8
-"11","obj1kr1",11,"Assessment","budget variance",45
-"12","obj1kr1",12,"Assessment","budget variance",-3
-"13","obj1kr1",1,"Audit","budget variance",-15
-"14","obj1kr1",2,"Audit","budget variance",0
-"15","obj1kr1",3,"Audit","budget variance",2
-"16","obj1kr1",4,"Audit","budget variance",0
-"17","obj1kr1",5,"Audit","budget variance",1
-"18","obj1kr1",6,"Audit","budget variance",2
-"19","obj1kr1",7,"Audit","budget variance",2
-"20","obj1kr1",8,"Audit","budget variance",1
-"21","obj1kr1",9,"Audit","budget variance",14
-"22","obj1kr1",10,"Audit","budget variance",25
-"23","obj1kr1",11,"Audit","budget variance",26
-"24","obj1kr1",12,"Audit","budget variance",14
-"25","obj1kr1",2,"BAA","budget variance",-51
-"26","obj1kr1",3,"BAA","budget variance",-18
-"27","obj1kr1",4,"BAA","budget variance",-18
-"28","obj1kr1",5,"BAA","budget variance",-18
-"29","obj1kr1",6,"BAA","budget variance",-18
-"30","obj1kr1",7,"BAA","budget variance",-18
-"31","obj1kr1",8,"BAA","budget variance",17
-"32","obj1kr1",9,"BAA","budget variance",23
-"33","obj1kr1",10,"BAA","budget variance",26
-"34","obj1kr1",11,"BAA","budget variance",23
-"35","obj1kr1",12,"BAA","budget variance",56
-"36","obj1kr1",2,"Board of Zoning Appeals","budget variance",-16
-"37","obj1kr1",3,"Board of Zoning Appeals","budget variance",32
-"38","obj1kr1",4,"Board of Zoning Appeals","budget variance",-16
-"39","obj1kr1",5,"Board of Zoning Appeals","budget variance",20
-"40","obj1kr1",6,"Board of Zoning Appeals","budget variance",-40
-"41","obj1kr1",7,"Board of Zoning Appeals","budget variance",-40
-"42","obj1kr1",8,"Board of Zoning Appeals","budget variance",20
-"43","obj1kr1",9,"Board of Zoning Appeals","budget variance",-52
-"44","obj1kr1",10,"Board of Zoning Appeals","budget variance",-28
-"45","obj1kr1",11,"Board of Zoning Appeals","budget variance",20
-"46","obj1kr1",12,"Board of Zoning Appeals","budget variance",8
-"47","obj1kr1",1,"Citizens Review","budget variance",-14
-"48","obj1kr1",2,"Citizens Review","budget variance",8
-"49","obj1kr1",3,"Citizens Review","budget variance",35
-"50","obj1kr1",4,"Citizens Review","budget variance",10
-"51","obj1kr1",5,"Citizens Review","budget variance",12
-"52","obj1kr1",6,"Citizens Review","budget variance",17
-"53","obj1kr1",7,"Citizens Review","budget variance",-36
-"54","obj1kr1",8,"Citizens Review","budget variance",-36
-"55","obj1kr1",9,"Citizens Review","budget variance",-37
-"56","obj1kr1",10,"Citizens Review","budget variance",15
-"57","obj1kr1",11,"Citizens Review","budget variance",13
-"58","obj1kr1",12,"Citizens Review","budget variance",2
-"59","obj1kr1",1,"City Clerk","budget variance",-16
-"60","obj1kr1",2,"City Clerk","budget variance",2
-"61","obj1kr1",3,"City Clerk","budget variance",1
-"62","obj1kr1",4,"City Clerk","budget variance",-1
-"63","obj1kr1",5,"City Clerk","budget variance",2
-"64","obj1kr1",6,"City Clerk","budget variance",6
-"65","obj1kr1",7,"City Clerk","budget variance",2
-"66","obj1kr1",8,"City Clerk","budget variance",3
-"67","obj1kr1",9,"City Clerk","budget variance",19
-"68","obj1kr1",10,"City Clerk","budget variance",3
-"69","obj1kr1",11,"City Clerk","budget variance",9
-"70","obj1kr1",12,"City Clerk","budget variance",-4
-"71","obj1kr1",1,"Common Council","budget variance",-15
-"72","obj1kr1",2,"Common Council","budget variance",3
-"73","obj1kr1",3,"Common Council","budget variance",-1
-"74","obj1kr1",4,"Common Council","budget variance",0
-"75","obj1kr1",5,"Common Council","budget variance",1
-"76","obj1kr1",6,"Common Council","budget variance",4
-"77","obj1kr1",7,"Common Council","budget variance",-1
-"78","obj1kr1",8,"Common Council","budget variance",1
-"79","obj1kr1",9,"Common Council","budget variance",-5
-"80","obj1kr1",10,"Common Council","budget variance",-6
-"81","obj1kr1",11,"Common Council","budget variance",1
-"82","obj1kr1",12,"Common Council","budget variance",-22
-"83","obj1kr1",1,"Engineering","budget variance",-32
-"84","obj1kr1",2,"Engineering","budget variance",-27
-"85","obj1kr1",3,"Engineering","budget variance",-24
-"86","obj1kr1",4,"Engineering","budget variance",-20
-"87","obj1kr1",5,"Engineering","budget variance",-22
-"88","obj1kr1",6,"Engineering","budget variance",-19
-"89","obj1kr1",7,"Engineering","budget variance",-20
-"90","obj1kr1",8,"Engineering","budget variance",-18
-"91","obj1kr1",9,"Engineering","budget variance",-22
-"92","obj1kr1",10,"Engineering","budget variance",-22
-"93","obj1kr1",11,"Engineering","budget variance",-25
-"94","obj1kr1",12,"Engineering","budget variance",-32
-"95","obj1kr1",1,"Law","budget variance",-51
-"96","obj1kr1",2,"Law","budget variance",-43
-"97","obj1kr1",3,"Law","budget variance",1
-"98","obj1kr1",4,"Law","budget variance",15
-"99","obj1kr1",5,"Law","budget variance",96
-"100","obj1kr1",6,"Law","budget variance",18
-"101","obj1kr1",7,"Law","budget variance",-8
-"102","obj1kr1",8,"Law","budget variance",10
-"103","obj1kr1",9,"Law","budget variance",3
-"104","obj1kr1",10,"Law","budget variance",-28
-"105","obj1kr1",11,"Law","budget variance",46
-"106","obj1kr1",12,"Law","budget variance",-22
-"107","obj1kr1",1,"Division of Sewers","budget variance",-17
-"108","obj1kr1",2,"Division of Sewers","budget variance",25
-"109","obj1kr1",3,"Division of Sewers","budget variance",-3
-"110","obj1kr1",4,"Division of Sewers","budget variance",68
-"111","obj1kr1",5,"Division of Sewers","budget variance",-15
-"112","obj1kr1",6,"Division of Sewers","budget variance",5
-"113","obj1kr1",7,"Division of Sewers","budget variance",-19
-"114","obj1kr1",8,"Division of Sewers","budget variance",-26
-"115","obj1kr1",9,"Division of Sewers","budget variance",-26
-"116","obj1kr1",10,"Division of Sewers","budget variance",24
-"117","obj1kr1",11,"Division of Sewers","budget variance",28
-"118","obj1kr1",12,"Division of Sewers","budget variance",27
-"119","obj1kr1",1,"DPW_combined","budget variance",-45
-"120","obj1kr1",2,"DPW_combined","budget variance",-8
-"121","obj1kr1",3,"DPW_combined","budget variance",-10
-"122","obj1kr1",4,"DPW_combined","budget variance",12
-"123","obj1kr1",5,"DPW_combined","budget variance",-5
-"124","obj1kr1",6,"DPW_combined","budget variance",-17
-"125","obj1kr1",7,"DPW_combined","budget variance",-7
-"126","obj1kr1",8,"DPW_combined","budget variance",-2
-"127","obj1kr1",9,"DPW_combined","budget variance",-6
-"128","obj1kr1",10,"DPW_combined","budget variance",-2
-"129","obj1kr1",11,"DPW_combined","budget variance",5
-"130","obj1kr1",12,"DPW_combined","budget variance",-19
-"131","obj1kr1",1,"Executive_combined","budget variance",-19
-"132","obj1kr1",2,"Executive_combined","budget variance",-33
-"133","obj1kr1",3,"Executive_combined","budget variance",-13
-"134","obj1kr1",4,"Executive_combined","budget variance",15
-"135","obj1kr1",5,"Executive_combined","budget variance",-16
-"136","obj1kr1",6,"Executive_combined","budget variance",-11
-"137","obj1kr1",7,"Executive_combined","budget variance",10
-"138","obj1kr1",8,"Executive_combined","budget variance",3
-"139","obj1kr1",9,"Executive_combined","budget variance",44
-"140","obj1kr1",10,"Executive_combined","budget variance",53
-"141","obj1kr1",11,"Executive_combined","budget variance",12
-"142","obj1kr1",12,"Executive_combined","budget variance",-14
-"143","obj1kr1",1,"Finance_combined","budget variance",-22
-"144","obj1kr1",2,"Finance_combined","budget variance",-22
-"145","obj1kr1",3,"Finance_combined","budget variance",-7
-"146","obj1kr1",4,"Finance_combined","budget variance",10
-"147","obj1kr1",5,"Finance_combined","budget variance",1
-"148","obj1kr1",6,"Finance_combined","budget variance",4
-"149","obj1kr1",7,"Finance_combined","budget variance",0
-"150","obj1kr1",8,"Finance_combined","budget variance",12
-"151","obj1kr1",9,"Finance_combined","budget variance",-3
-"152","obj1kr1",10,"Finance_combined","budget variance",-8
-"153","obj1kr1",11,"Finance_combined","budget variance",-2
-"154","obj1kr1",12,"Finance_combined","budget variance",-7
-"155","obj1kr1",1,"Fire_combined","budget variance",-17
-"156","obj1kr1",2,"Fire_combined","budget variance",-3
-"157","obj1kr1",3,"Fire_combined","budget variance",7
-"158","obj1kr1",4,"Fire_combined","budget variance",13
-"159","obj1kr1",5,"Fire_combined","budget variance",10
-"160","obj1kr1",6,"Fire_combined","budget variance",-6
-"161","obj1kr1",7,"Fire_combined","budget variance",-7
-"162","obj1kr1",8,"Fire_combined","budget variance",-3
-"163","obj1kr1",9,"Fire_combined","budget variance",-7
-"164","obj1kr1",10,"Fire_combined","budget variance",5
-"165","obj1kr1",11,"Fire_combined","budget variance",7
-"166","obj1kr1",12,"Fire_combined","budget variance",-10
-"167","obj1kr1",1,"NBD_combined","budget variance",-26
-"168","obj1kr1",2,"NBD_combined","budget variance",-36
-"169","obj1kr1",3,"NBD_combined","budget variance",-17
-"170","obj1kr1",4,"NBD_combined","budget variance",28
-"171","obj1kr1",5,"NBD_combined","budget variance",-13
-"172","obj1kr1",6,"NBD_combined","budget variance",-5
-"173","obj1kr1",7,"NBD_combined","budget variance",-68
-"174","obj1kr1",8,"NBD_combined","budget variance",68
-"175","obj1kr1",9,"NBD_combined","budget variance",-3
-"176","obj1kr1",10,"NBD_combined","budget variance",-11
-"177","obj1kr1",11,"NBD_combined","budget variance",7
-"178","obj1kr1",12,"NBD_combined","budget variance",2
-"179","obj1kr1",1,"Parks_combined","budget variance",-41
-"180","obj1kr1",2,"Parks_combined","budget variance",4
-"181","obj1kr1",3,"Parks_combined","budget variance",-21
-"182","obj1kr1",4,"Parks_combined","budget variance",-7
-"183","obj1kr1",5,"Parks_combined","budget variance",7
-"184","obj1kr1",6,"Parks_combined","budget variance",19
-"185","obj1kr1",7,"Parks_combined","budget variance",-16
-"186","obj1kr1",8,"Parks_combined","budget variance",-4
-"187","obj1kr1",9,"Parks_combined","budget variance",-7
-"188","obj1kr1",10,"Parks_combined","budget variance",-19
-"189","obj1kr1",11,"Parks_combined","budget variance",6
-"190","obj1kr1",12,"Parks_combined","budget variance",-2
-"191","obj1kr1",1,"Police_combined","budget variance",-33
-"192","obj1kr1",2,"Police_combined","budget variance",-18
-"193","obj1kr1",3,"Police_combined","budget variance",0
-"194","obj1kr1",4,"Police_combined","budget variance",-90
-"195","obj1kr1",5,"Police_combined","budget variance",82
-"196","obj1kr1",6,"Police_combined","budget variance",-6
-"197","obj1kr1",7,"Police_combined","budget variance",-1
-"198","obj1kr1",8,"Police_combined","budget variance",-6
-"199","obj1kr1",9,"Police_combined","budget variance",-10
-"200","obj1kr1",10,"Police_combined","budget variance",-5
-"201","obj1kr1",11,"Police_combined","budget variance",30
-"202","obj1kr1",12,"Police_combined","budget variance",-11
-"203","obj1kr1",1,"Water_combined","budget variance",-35
-"204","obj1kr1",2,"Water_combined","budget variance",-26
-"205","obj1kr1",3,"Water_combined","budget variance",26
-"206","obj1kr1",4,"Water_combined","budget variance",44
-"207","obj1kr1",5,"Water_combined","budget variance",27
-"208","obj1kr1",6,"Water_combined","budget variance",-8
-"209","obj1kr1",7,"Water_combined","budget variance",-6
-"210","obj1kr1",8,"Water_combined","budget variance",-8
-"211","obj1kr1",9,"Water_combined","budget variance",20
-"212","obj1kr1",10,"Water_combined","budget variance",-32
-"213","obj1kr1",11,"Water_combined","budget variance",-13
-"214","obj1kr1",12,"Water_combined","budget variance",-20
-"215","obj2kr1",1557115200,"comm reno","approved in time",50
-"216","obj2kr1",1557720000,"comm reno","approved in time",58
-"217","obj2kr1",1557720000,"comm reno","approved in time",58
-"218","obj2kr1",1558324800,"comm reno","approved in time",60
-"219","obj2kr1",1558411200,"comm reno","approved in time",60
-"220","obj2kr1",1558411200,"comm reno","approved in time",60
-"221","obj2kr1",1558411200,"comm reno","approved in time",60
-"222","obj2kr1",1558929600,"comm reno","approved in time",68
-"223","obj2kr1",1559534400,"comm reno","approved in time",74
-"224","obj2kr1",1560139200,"comm reno","approved in time",68
-"225","obj2kr1",1560744000,"comm reno","approved in time",67
-"226","obj2kr1",1561348800,"comm reno","approved in time",61
-"227","obj2kr1",1561953600,"comm reno","approved in time",62
-"228","obj2kr1",1557115200,"res reno","approved in time",85
-"229","obj2kr1",1557720000,"res reno","approved in time",83
-"230","obj2kr1",1557720000,"res reno","approved in time",83
-"231","obj2kr1",1558324800,"res reno","approved in time",89
-"232","obj2kr1",1558411200,"res reno","approved in time",89
-"233","obj2kr1",1558411200,"res reno","approved in time",89
-"234","obj2kr1",1558411200,"res reno","approved in time",89
-"235","obj2kr1",1558929600,"res reno","approved in time",83
-"236","obj2kr1",1559534400,"res reno","approved in time",83
-"237","obj2kr1",1560139200,"res reno","approved in time",84
-"238","obj2kr1",1560744000,"res reno","approved in time",86
-"239","obj2kr1",1561348800,"res reno","approved in time",90
-"240","obj2kr1",1561953600,"res reno","approved in time",91
-"241","obj2kr1",1557115200,"res new","approved in time",0
-"242","obj2kr1",1557720000,"res new","approved in time",0
-"243","obj2kr1",1557720000,"res new","approved in time",0
-"244","obj2kr1",1557115200,"comm new","approved in time",0
-"245","obj2kr1",1557720000,"comm new","approved in time",0
-"246","obj2kr1",1557720000,"comm new","approved in time",0
-"247","obj2kr1",1558324800,"comm new","approved in time",0
-"248","obj2kr1",1558411200,"comm new","approved in time",0
-"249","obj2kr1",1558411200,"comm new","approved in time",0
-"250","obj2kr1",1558411200,"comm new","approved in time",0
-"251","obj2kr1",1561953600,"comm new","approved in time",0
-"252","obj2kr1",1557115200,"ROW road","approved in time",32
-"253","obj2kr1",1557720000,"ROW road","approved in time",28
-"254","obj2kr1",1557720000,"ROW road","approved in time",28
-"255","obj2kr1",1558324800,"ROW road","approved in time",25
-"256","obj2kr1",1558411200,"ROW road","approved in time",25
-"257","obj2kr1",1558411200,"ROW road","approved in time",25
-"258","obj2kr1",1558411200,"ROW road","approved in time",25
-"259","obj2kr1",1558929600,"ROW road","approved in time",25
-"260","obj2kr1",1559534400,"ROW road","approved in time",25
-"261","obj2kr1",1560139200,"ROW road","approved in time",46
-"262","obj2kr1",1560744000,"ROW road","approved in time",54
-"263","obj2kr1",1561348800,"ROW road","approved in time",55
-"264","obj2kr1",1561953600,"ROW road","approved in time",58
-"265","obj2kr1",1561953600,"ROW curb","approved in time",0
-"266","obj2kr2",1557115200,"H&S violations","compliance perc",19
-"267","obj2kr2",1557720000,"H&S violations","compliance perc",17
-"268","obj2kr2",1558324800,"H&S violations","compliance perc",19
-"269","obj2kr2",1558411200,"H&S violations","compliance perc",21
-"270","obj2kr2",1558929600,"H&S violations","compliance perc",19
-"271","obj2kr2",1559534400,"H&S violations","compliance perc",11
-"272","obj2kr2",1560139200,"H&S violations","compliance perc",11
-"273","obj2kr2",1560744000,"H&S violations","compliance perc",11
-"274","obj2kr2",1561348800,"H&S violations","compliance perc",12
-"275","obj2kr2",1561953600,"H&S violations","compliance perc",11
-"276","obj2kr2",1557115200,"other violations","compliance perc",31
-"277","obj2kr2",1557720000,"other violations","compliance perc",30
-"278","obj2kr2",1558324800,"other violations","compliance perc",32
-"279","obj2kr2",1558411200,"other violations","compliance perc",32
-"280","obj2kr2",1558929600,"other violations","compliance perc",32
-"281","obj2kr2",1559534400,"other violations","compliance perc",37
-"282","obj2kr2",1560139200,"other violations","compliance perc",41
-"283","obj2kr2",1560744000,"other violations","compliance perc",43
-"284","obj2kr2",1561348800,"other violations","compliance perc",45
-"285","obj2kr2",1561953600,"other violations","compliance perc",45
-"286","obj2kr3",1557115200,"census tract calls","perc change in calls",-4
-"287","obj2kr3",1557720000,"census tract calls","perc change in calls",9.00000000000001
-"288","obj2kr3",1558324800,"census tract calls","perc change in calls",7.00000000000001
-"289","obj2kr3",1558411200,"census tract calls","perc change in calls",16
-"290","obj2kr3",1558929600,"census tract calls","perc change in calls",25
-"291","obj2kr3",1559534400,"census tract calls","perc change in calls",16
-"292","obj2kr3",1560139200,"census tract calls","perc change in calls",17
-"293","obj2kr3",1560744000,"census tract calls","perc change in calls",7.00000000000001
-"294","obj2kr3",1561348800,"census tract calls","perc change in calls",-9
-"295","obj2kr3",1561953600,"census tract calls","perc change in calls",-12
-"296","obj3kr1",1559620800,"comments","perc difference",-32
-"297","obj3kr1",1560139200,"comments","perc difference",-54
-"298","obj3kr1",1560744000,"comments","perc difference",-56
-"299","obj3kr1",1561348800,"comments","perc difference",-47
-"300","obj3kr1",1561953600,"comments","perc difference",-36
-"301","obj3kr1",1559620800,"reactions","perc difference",25
-"302","obj3kr1",1560139200,"reactions","perc difference",-13
-"303","obj3kr1",1560744000,"reactions","perc difference",-21
-"304","obj3kr1",1561348800,"reactions","perc difference",-20
-"305","obj3kr1",1561953600,"reactions","perc difference",-12
-"306","obj3kr1",1559620800,"shares","perc difference",-40
-"307","obj3kr1",1560139200,"shares","perc difference",-62
-"308","obj3kr1",1560744000,"shares","perc difference",-65
-"309","obj3kr1",1561348800,"shares","perc difference",-62
-"310","obj3kr1",1561953600,"shares","perc difference",-46
-"311","obj3kr2",1557115200,"cityline satisfaction","satisfaction percentage",60
-"312","obj3kr2",1557201600,"cityline satisfaction","satisfaction percentage",62
-"313","obj3kr2",1557720000,"cityline satisfaction","satisfaction percentage",68
-"314","obj3kr2",1558411200,"cityline satisfaction","satisfaction percentage",58
-"315","obj3kr2",1558929600,"cityline satisfaction","satisfaction percentage",50
-"316","obj3kr2",1559534400,"cityline satisfaction","satisfaction percentage",43
-"317","obj3kr2",1559620800,"cityline satisfaction","satisfaction percentage",46
-"318","obj3kr2",1560139200,"cityline satisfaction","satisfaction percentage",46
-"319","obj3kr2",1560744000,"cityline satisfaction","satisfaction percentage",46
-"320","obj3kr2",1561348800,"cityline satisfaction","satisfaction percentage",51
-"321","obj3kr2",1561953600,"cityline satisfaction","satisfaction percentage",63
-"322","obj3kr3",1557115200,"census tracts","perc change in calls",-10
-"323","obj3kr3",1557201600,"census tracts","perc change in calls",0
-"324","obj3kr3",1557720000,"census tracts","perc change in calls",-10
-"325","obj3kr3",1558411200,"census tracts","perc change in calls",-10
-"326","obj3kr3",1558929600,"census tracts","perc change in calls",-20
-"327","obj3kr3",1559534400,"census tracts","perc change in calls",-5.2
-"328","obj3kr3",1559620800,"census tracts","perc change in calls",-3.3
-"329","obj3kr3",1560139200,"census tracts","perc change in calls",-8.7
-"330","obj3kr3",1560744000,"census tracts","perc change in calls",-16.4
-"331","obj3kr3",1561348800,"census tracts","perc change in calls",-19.9
-"332","obj3kr3",1561953600,"census tracts","perc change in calls",-19.1
-"333","obj4kr1",1557115200,"potholes","perc closed in time",100
-"334","obj4kr1",1558411200,"potholes","perc closed in time",75
-"335","obj4kr1",1558929600,"potholes","perc closed in time",77
-"336","obj4kr1",1559534400,"potholes","perc closed in time",72
-"337","obj4kr1",1560139200,"potholes","perc closed in time",72
-"338","obj4kr1",1560744000,"potholes","perc closed in time",42
-"339","obj4kr1",1561348800,"potholes","perc closed in time",30
-"340","obj4kr1",1561953600,"potholes","perc closed in time",35
-"341","obj4kr1",1557115200,"no_heat","perc closed in time",91
-"342","obj4kr1",1558411200,"no_heat","perc closed in time",100
-"343","obj4kr1",1558929600,"no_heat","perc closed in time",100
-"344","obj4kr1",1559534400,"no_heat","perc closed in time",100
-"345","obj4kr1",1560139200,"no_heat","perc closed in time",100
-"346","obj4kr1",1560744000,"no_heat","perc closed in time",100
-"347","obj4kr1",1561348800,"no_heat","perc closed in time",100
-"348","obj4kr1",1561953600,"no_heat","perc closed in time",100
-"349","obj4kr1",1557115200,"trash","perc closed in time",87
-"350","obj4kr1",1558411200,"trash","perc closed in time",100
-"351","obj4kr1",1558929600,"trash","perc closed in time",100
-"352","obj4kr1",1559534400,"trash","perc closed in time",100
-"353","obj4kr1",1560139200,"trash","perc closed in time",100
-"354","obj4kr1",1560744000,"trash","perc closed in time",100
-"355","obj4kr1",1561348800,"trash","perc closed in time",97
-"356","obj4kr1",1561953600,"trash","perc closed in time",94
-"357","obj4kr1",1557115200,"fire_response","perc closed in time",91
-"358","obj4kr1",1558411200,"fire_response","perc closed in time",93
-"359","obj4kr1",1558929600,"fire_response","perc closed in time",94
-"360","obj4kr1",1559534400,"fire_response","perc closed in time",94
-"361","obj4kr1",1560139200,"fire_response","perc closed in time",94
-"362","obj4kr1",1560744000,"fire_response","perc closed in time",94
-"363","obj4kr1",1561348800,"fire_response","perc closed in time",97
-"364","obj4kr1",1561953600,"fire_response","perc closed in time",94
-"365","obj4kr1",1558411200,"police_response","perc closed in time",79
-"366","obj4kr1",1558929600,"police_response","perc closed in time",80
-"367","obj4kr1",1559534400,"police_response","perc closed in time",80
-"368","obj4kr1",1560139200,"police_response","perc closed in time",80
-"369","obj4kr1",1560744000,"police_response","perc closed in time",77
-"370","obj4kr1",1561348800,"police_response","perc closed in time",77
-"371","obj4kr1",1561953600,"police_response","perc closed in time",74
-"372","obj4kr1",1558411200,"overgrowth","perc closed in time",88
-"373","obj4kr1",1558929600,"overgrowth","perc closed in time",84
-"374","obj4kr1",1559534400,"overgrowth","perc closed in time",86
-"375","obj4kr1",1560139200,"overgrowth","perc closed in time",86
-"376","obj4kr1",1560744000,"overgrowth","perc closed in time",85
-"377","obj4kr1",1561348800,"overgrowth","perc closed in time",86
-"378","obj4kr1",1561953600,"overgrowth","perc closed in time",82
-"379","obj4kr2",1557115200,"potholes","perc one time visit",68
-"380","obj4kr2",1557720000,"potholes","perc one time visit",68
-"381","obj4kr2",1558411200,"potholes","perc one time visit",68
-"382","obj4kr2",1558929600,"potholes","perc one time visit",68
-"383","obj4kr2",1559534400,"potholes","perc one time visit",68
-"384","obj4kr2",1560139200,"potholes","perc one time visit",68
-"385","obj4kr2",1560744000,"potholes","perc one time visit",68
-"386","obj4kr2",1561348800,"potholes","perc one time visit",68
-"387","obj4kr2",1561953600,"potholes","perc one time visit",68
-"388","obj4kr2",1557115200,"sewer","perc one time visit",88
-"389","obj4kr2",1557720000,"sewer","perc one time visit",88
-"390","obj4kr2",1558411200,"sewer","perc one time visit",88
-"391","obj4kr2",1558929600,"sewer","perc one time visit",88
-"392","obj4kr2",1559534400,"sewer","perc one time visit",88
-"393","obj4kr2",1560139200,"sewer","perc one time visit",88
-"394","obj4kr2",1560744000,"sewer","perc one time visit",88
-"395","obj4kr2",1561348800,"sewer","perc one time visit",89
-"396","obj4kr2",1561953600,"sewer","perc one time visit",88
-"397","obj4kr2",1557115200,"blue bins","perc one time visit",86
-"398","obj4kr2",1557720000,"blue bins","perc one time visit",86
-"399","obj4kr2",1558411200,"blue bins","perc one time visit",86
-"400","obj4kr2",1558929600,"blue bins","perc one time visit",86
-"401","obj4kr2",1559534400,"blue bins","perc one time visit",85
-"402","obj4kr2",1560139200,"blue bins","perc one time visit",85
-"403","obj4kr2",1560744000,"blue bins","perc one time visit",85
-"404","obj4kr2",1561348800,"blue bins","perc one time visit",85
-"405","obj4kr2",1561953600,"blue bins","perc one time visit",84
-"406","obj4kr2",1557115200,"water mains","perc one time visit",88
-"407","obj4kr2",1557720000,"water mains","perc one time visit",89
-"408","obj4kr2",1558411200,"water mains","perc one time visit",89
-"409","obj4kr2",1558929600,"water mains","perc one time visit",88
-"410","obj4kr2",1559534400,"water mains","perc one time visit",88
-"411","obj4kr2",1560139200,"water mains","perc one time visit",88
-"412","obj4kr2",1560744000,"water mains","perc one time visit",88
-"413","obj4kr2",1561348800,"water mains","perc one time visit",88
-"414","obj4kr2",1561953600,"water mains","perc one time visit",88
-"415","obj4kr2",1557115200,"trash","perc one time visit",84
-"416","obj4kr2",1557720000,"trash","perc one time visit",84
-"417","obj4kr2",1558411200,"trash","perc one time visit",85
-"418","obj4kr2",1558929600,"trash","perc one time visit",85
-"419","obj4kr2",1559534400,"trash","perc one time visit",85
-"420","obj4kr2",1560139200,"trash","perc one time visit",85
-"421","obj4kr2",1560744000,"trash","perc one time visit",85
-"422","obj4kr2",1561348800,"trash","perc one time visit",85
-"423","obj4kr2",1561953600,"trash","perc one time visit",85
-"424","obj4kr2",1557115200,"overgrowth","perc one time visit",85
-"425","obj4kr2",1557720000,"overgrowth","perc one time visit",85
-"426","obj4kr2",1558411200,"overgrowth","perc one time visit",84
-"427","obj4kr2",1558929600,"overgrowth","perc one time visit",84
-"428","obj4kr2",1559534400,"overgrowth","perc one time visit",84
-"429","obj4kr2",1560139200,"overgrowth","perc one time visit",85
-"430","obj4kr2",1560744000,"overgrowth","perc one time visit",86
-"431","obj4kr2",1561348800,"overgrowth","perc one time visit",86
-"432","obj4kr2",1561953600,"overgrowth","perc one time visit",85
-"433","obj4kr2",1558411200,"malfunctioning alarms","perc one time visit",78
-"434","obj4kr2",1558929600,"malfunctioning alarms","perc one time visit",79
-"435","obj4kr2",1559534400,"malfunctioning alarms","perc one time visit",78
-"436","obj4kr2",1560139200,"malfunctioning alarms","perc one time visit",78
-"437","obj4kr2",1560744000,"malfunctioning alarms","perc one time visit",79
-"438","obj4kr2",1561348800,"malfunctioning alarms","perc one time visit",79
-"439","obj4kr2",1561953600,"malfunctioning alarms","perc one time visit",79
+,OKR,date_or_period,category_or_dept,variable,value
+1,obj1kr1,1,Assessment,budget variance,-22
+2,obj1kr1,2,Assessment,budget variance,-37
+3,obj1kr1,3,Assessment,budget variance,6
+4,obj1kr1,4,Assessment,budget variance,-8
+5,obj1kr1,5,Assessment,budget variance,39
+6,obj1kr1,6,Assessment,budget variance,2
+7,obj1kr1,7,Assessment,budget variance,-37
+8,obj1kr1,8,Assessment,budget variance,-6
+9,obj1kr1,9,Assessment,budget variance,4
+10,obj1kr1,10,Assessment,budget variance,8
+11,obj1kr1,11,Assessment,budget variance,45
+12,obj1kr1,12,Assessment,budget variance,-3
+13,obj1kr1,1,Audit,budget variance,-15
+14,obj1kr1,2,Audit,budget variance,0
+15,obj1kr1,3,Audit,budget variance,2
+16,obj1kr1,4,Audit,budget variance,0
+17,obj1kr1,5,Audit,budget variance,1
+18,obj1kr1,6,Audit,budget variance,2
+19,obj1kr1,7,Audit,budget variance,2
+20,obj1kr1,8,Audit,budget variance,1
+21,obj1kr1,9,Audit,budget variance,14
+22,obj1kr1,10,Audit,budget variance,25
+23,obj1kr1,11,Audit,budget variance,26
+24,obj1kr1,12,Audit,budget variance,14
+25,obj1kr1,2,BAA,budget variance,-51
+26,obj1kr1,3,BAA,budget variance,-18
+27,obj1kr1,4,BAA,budget variance,-18
+28,obj1kr1,5,BAA,budget variance,-18
+29,obj1kr1,6,BAA,budget variance,-18
+30,obj1kr1,7,BAA,budget variance,-18
+31,obj1kr1,8,BAA,budget variance,17
+32,obj1kr1,9,BAA,budget variance,23
+33,obj1kr1,10,BAA,budget variance,26
+34,obj1kr1,11,BAA,budget variance,23
+35,obj1kr1,12,BAA,budget variance,56
+36,obj1kr1,2,Board of Zoning Appeals,budget variance,-16
+37,obj1kr1,3,Board of Zoning Appeals,budget variance,32
+38,obj1kr1,4,Board of Zoning Appeals,budget variance,-16
+39,obj1kr1,5,Board of Zoning Appeals,budget variance,20
+40,obj1kr1,6,Board of Zoning Appeals,budget variance,-40
+41,obj1kr1,7,Board of Zoning Appeals,budget variance,-40
+42,obj1kr1,8,Board of Zoning Appeals,budget variance,20
+43,obj1kr1,9,Board of Zoning Appeals,budget variance,-52
+44,obj1kr1,10,Board of Zoning Appeals,budget variance,-28
+45,obj1kr1,11,Board of Zoning Appeals,budget variance,20
+46,obj1kr1,12,Board of Zoning Appeals,budget variance,8
+47,obj1kr1,1,Citizens Review,budget variance,-14
+48,obj1kr1,2,Citizens Review,budget variance,8
+49,obj1kr1,3,Citizens Review,budget variance,35
+50,obj1kr1,4,Citizens Review,budget variance,10
+51,obj1kr1,5,Citizens Review,budget variance,12
+52,obj1kr1,6,Citizens Review,budget variance,17
+53,obj1kr1,7,Citizens Review,budget variance,-36
+54,obj1kr1,8,Citizens Review,budget variance,-36
+55,obj1kr1,9,Citizens Review,budget variance,-37
+56,obj1kr1,10,Citizens Review,budget variance,15
+57,obj1kr1,11,Citizens Review,budget variance,13
+58,obj1kr1,12,Citizens Review,budget variance,2
+59,obj1kr1,1,City Clerk,budget variance,-16
+60,obj1kr1,2,City Clerk,budget variance,2
+61,obj1kr1,3,City Clerk,budget variance,1
+62,obj1kr1,4,City Clerk,budget variance,-1
+63,obj1kr1,5,City Clerk,budget variance,2
+64,obj1kr1,6,City Clerk,budget variance,6
+65,obj1kr1,7,City Clerk,budget variance,2
+66,obj1kr1,8,City Clerk,budget variance,3
+67,obj1kr1,9,City Clerk,budget variance,19
+68,obj1kr1,10,City Clerk,budget variance,3
+69,obj1kr1,11,City Clerk,budget variance,9
+70,obj1kr1,12,City Clerk,budget variance,-4
+71,obj1kr1,1,Common Council,budget variance,-15
+72,obj1kr1,2,Common Council,budget variance,3
+73,obj1kr1,3,Common Council,budget variance,-1
+74,obj1kr1,4,Common Council,budget variance,0
+75,obj1kr1,5,Common Council,budget variance,1
+76,obj1kr1,6,Common Council,budget variance,4
+77,obj1kr1,7,Common Council,budget variance,-1
+78,obj1kr1,8,Common Council,budget variance,1
+79,obj1kr1,9,Common Council,budget variance,-5
+80,obj1kr1,10,Common Council,budget variance,-6
+81,obj1kr1,11,Common Council,budget variance,1
+82,obj1kr1,12,Common Council,budget variance,-22
+83,obj1kr1,1,Engineering,budget variance,-32
+84,obj1kr1,2,Engineering,budget variance,-27
+85,obj1kr1,3,Engineering,budget variance,-24
+86,obj1kr1,4,Engineering,budget variance,-20
+87,obj1kr1,5,Engineering,budget variance,-22
+88,obj1kr1,6,Engineering,budget variance,-19
+89,obj1kr1,7,Engineering,budget variance,-20
+90,obj1kr1,8,Engineering,budget variance,-18
+91,obj1kr1,9,Engineering,budget variance,-22
+92,obj1kr1,10,Engineering,budget variance,-22
+93,obj1kr1,11,Engineering,budget variance,-25
+94,obj1kr1,12,Engineering,budget variance,-32
+95,obj1kr1,1,Law,budget variance,-51
+96,obj1kr1,2,Law,budget variance,-43
+97,obj1kr1,3,Law,budget variance,1
+98,obj1kr1,4,Law,budget variance,15
+99,obj1kr1,5,Law,budget variance,96
+100,obj1kr1,6,Law,budget variance,18
+101,obj1kr1,7,Law,budget variance,-8
+102,obj1kr1,8,Law,budget variance,10
+103,obj1kr1,9,Law,budget variance,3
+104,obj1kr1,10,Law,budget variance,-28
+105,obj1kr1,11,Law,budget variance,46
+106,obj1kr1,12,Law,budget variance,-22
+107,obj1kr1,1,Division of Sewers,budget variance,-17
+108,obj1kr1,2,Division of Sewers,budget variance,25
+109,obj1kr1,3,Division of Sewers,budget variance,-3
+110,obj1kr1,4,Division of Sewers,budget variance,68
+111,obj1kr1,5,Division of Sewers,budget variance,-15
+112,obj1kr1,6,Division of Sewers,budget variance,5
+113,obj1kr1,7,Division of Sewers,budget variance,-19
+114,obj1kr1,8,Division of Sewers,budget variance,-26
+115,obj1kr1,9,Division of Sewers,budget variance,-26
+116,obj1kr1,10,Division of Sewers,budget variance,24
+117,obj1kr1,11,Division of Sewers,budget variance,28
+118,obj1kr1,12,Division of Sewers,budget variance,27
+119,obj1kr1,1,DPW_combined,budget variance,-45
+120,obj1kr1,2,DPW_combined,budget variance,-8
+121,obj1kr1,3,DPW_combined,budget variance,-10
+122,obj1kr1,4,DPW_combined,budget variance,12
+123,obj1kr1,5,DPW_combined,budget variance,-5
+124,obj1kr1,6,DPW_combined,budget variance,-17
+125,obj1kr1,7,DPW_combined,budget variance,-7
+126,obj1kr1,8,DPW_combined,budget variance,-2
+127,obj1kr1,9,DPW_combined,budget variance,-6
+128,obj1kr1,10,DPW_combined,budget variance,-2
+129,obj1kr1,11,DPW_combined,budget variance,5
+130,obj1kr1,12,DPW_combined,budget variance,-19
+131,obj1kr1,1,Executive_combined,budget variance,-19
+132,obj1kr1,2,Executive_combined,budget variance,-33
+133,obj1kr1,3,Executive_combined,budget variance,-13
+134,obj1kr1,4,Executive_combined,budget variance,15
+135,obj1kr1,5,Executive_combined,budget variance,-16
+136,obj1kr1,6,Executive_combined,budget variance,-11
+137,obj1kr1,7,Executive_combined,budget variance,10
+138,obj1kr1,8,Executive_combined,budget variance,3
+139,obj1kr1,9,Executive_combined,budget variance,44
+140,obj1kr1,10,Executive_combined,budget variance,53
+141,obj1kr1,11,Executive_combined,budget variance,12
+142,obj1kr1,12,Executive_combined,budget variance,-14
+143,obj1kr1,1,Finance_combined,budget variance,-22
+144,obj1kr1,2,Finance_combined,budget variance,-22
+145,obj1kr1,3,Finance_combined,budget variance,-7
+146,obj1kr1,4,Finance_combined,budget variance,10
+147,obj1kr1,5,Finance_combined,budget variance,1
+148,obj1kr1,6,Finance_combined,budget variance,4
+149,obj1kr1,7,Finance_combined,budget variance,0
+150,obj1kr1,8,Finance_combined,budget variance,12
+151,obj1kr1,9,Finance_combined,budget variance,-3
+152,obj1kr1,10,Finance_combined,budget variance,-8
+153,obj1kr1,11,Finance_combined,budget variance,-2
+154,obj1kr1,12,Finance_combined,budget variance,-7
+155,obj1kr1,1,Fire_combined,budget variance,-17
+156,obj1kr1,2,Fire_combined,budget variance,-3
+157,obj1kr1,3,Fire_combined,budget variance,7
+158,obj1kr1,4,Fire_combined,budget variance,13
+159,obj1kr1,5,Fire_combined,budget variance,10
+160,obj1kr1,6,Fire_combined,budget variance,-6
+161,obj1kr1,7,Fire_combined,budget variance,-7
+162,obj1kr1,8,Fire_combined,budget variance,-3
+163,obj1kr1,9,Fire_combined,budget variance,-7
+164,obj1kr1,10,Fire_combined,budget variance,5
+165,obj1kr1,11,Fire_combined,budget variance,7
+166,obj1kr1,12,Fire_combined,budget variance,-10
+167,obj1kr1,1,NBD_combined,budget variance,-26
+168,obj1kr1,2,NBD_combined,budget variance,-36
+169,obj1kr1,3,NBD_combined,budget variance,-17
+170,obj1kr1,4,NBD_combined,budget variance,28
+171,obj1kr1,5,NBD_combined,budget variance,-13
+172,obj1kr1,6,NBD_combined,budget variance,-5
+173,obj1kr1,7,NBD_combined,budget variance,-68
+174,obj1kr1,8,NBD_combined,budget variance,68
+175,obj1kr1,9,NBD_combined,budget variance,-3
+176,obj1kr1,10,NBD_combined,budget variance,-11
+177,obj1kr1,11,NBD_combined,budget variance,7
+178,obj1kr1,12,NBD_combined,budget variance,2
+179,obj1kr1,1,Parks_combined,budget variance,-41
+180,obj1kr1,2,Parks_combined,budget variance,4
+181,obj1kr1,3,Parks_combined,budget variance,-21
+182,obj1kr1,4,Parks_combined,budget variance,-7
+183,obj1kr1,5,Parks_combined,budget variance,7
+184,obj1kr1,6,Parks_combined,budget variance,19
+185,obj1kr1,7,Parks_combined,budget variance,-16
+186,obj1kr1,8,Parks_combined,budget variance,-4
+187,obj1kr1,9,Parks_combined,budget variance,-7
+188,obj1kr1,10,Parks_combined,budget variance,-19
+189,obj1kr1,11,Parks_combined,budget variance,6
+190,obj1kr1,12,Parks_combined,budget variance,-2
+191,obj1kr1,1,Police_combined,budget variance,-33
+192,obj1kr1,2,Police_combined,budget variance,-18
+193,obj1kr1,3,Police_combined,budget variance,0
+194,obj1kr1,4,Police_combined,budget variance,-90
+195,obj1kr1,5,Police_combined,budget variance,82
+196,obj1kr1,6,Police_combined,budget variance,-6
+197,obj1kr1,7,Police_combined,budget variance,-1
+198,obj1kr1,8,Police_combined,budget variance,-6
+199,obj1kr1,9,Police_combined,budget variance,-10
+200,obj1kr1,10,Police_combined,budget variance,-5
+201,obj1kr1,11,Police_combined,budget variance,30
+202,obj1kr1,12,Police_combined,budget variance,-11
+203,obj1kr1,1,Water_combined,budget variance,-35
+204,obj1kr1,2,Water_combined,budget variance,-26
+205,obj1kr1,3,Water_combined,budget variance,26
+206,obj1kr1,4,Water_combined,budget variance,44
+207,obj1kr1,5,Water_combined,budget variance,27
+208,obj1kr1,6,Water_combined,budget variance,-8
+209,obj1kr1,7,Water_combined,budget variance,-6
+210,obj1kr1,8,Water_combined,budget variance,-8
+211,obj1kr1,9,Water_combined,budget variance,20
+212,obj1kr1,10,Water_combined,budget variance,-32
+213,obj1kr1,11,Water_combined,budget variance,-13
+214,obj1kr1,12,Water_combined,budget variance,-20
+215,obj2kr1,1557115200,comm reno,approved in time,50
+216,obj2kr1,1557720000,comm reno,approved in time,58
+217,obj2kr1,1557720000,comm reno,approved in time,58
+218,obj2kr1,1558324800,comm reno,approved in time,60
+219,obj2kr1,1558411200,comm reno,approved in time,60
+220,obj2kr1,1558411200,comm reno,approved in time,60
+221,obj2kr1,1558411200,comm reno,approved in time,60
+222,obj2kr1,1558929600,comm reno,approved in time,68
+223,obj2kr1,1559534400,comm reno,approved in time,74
+224,obj2kr1,1560139200,comm reno,approved in time,68
+225,obj2kr1,1560744000,comm reno,approved in time,67
+226,obj2kr1,1561348800,comm reno,approved in time,61
+227,obj2kr1,1561953600,comm reno,approved in time,62
+228,obj2kr1,1557115200,res reno,approved in time,85
+229,obj2kr1,1557720000,res reno,approved in time,83
+230,obj2kr1,1557720000,res reno,approved in time,83
+231,obj2kr1,1558324800,res reno,approved in time,89
+232,obj2kr1,1558411200,res reno,approved in time,89
+233,obj2kr1,1558411200,res reno,approved in time,89
+234,obj2kr1,1558411200,res reno,approved in time,89
+235,obj2kr1,1558929600,res reno,approved in time,83
+236,obj2kr1,1559534400,res reno,approved in time,83
+237,obj2kr1,1560139200,res reno,approved in time,84
+238,obj2kr1,1560744000,res reno,approved in time,86
+239,obj2kr1,1561348800,res reno,approved in time,90
+240,obj2kr1,1561953600,res reno,approved in time,91
+241,obj2kr1,1557115200,res new,approved in time,0
+242,obj2kr1,1557720000,res new,approved in time,0
+243,obj2kr1,1557720000,res new,approved in time,0
+244,obj2kr1,1557115200,comm new,approved in time,0
+245,obj2kr1,1557720000,comm new,approved in time,0
+246,obj2kr1,1557720000,comm new,approved in time,0
+247,obj2kr1,1558324800,comm new,approved in time,0
+248,obj2kr1,1558411200,comm new,approved in time,0
+249,obj2kr1,1558411200,comm new,approved in time,0
+250,obj2kr1,1558411200,comm new,approved in time,0
+251,obj2kr1,1561953600,comm new,approved in time,0
+252,obj2kr1,1557115200,ROW road,approved in time,32
+253,obj2kr1,1557720000,ROW road,approved in time,28
+254,obj2kr1,1557720000,ROW road,approved in time,28
+255,obj2kr1,1558324800,ROW road,approved in time,25
+256,obj2kr1,1558411200,ROW road,approved in time,25
+257,obj2kr1,1558411200,ROW road,approved in time,25
+258,obj2kr1,1558411200,ROW road,approved in time,25
+259,obj2kr1,1558929600,ROW road,approved in time,25
+260,obj2kr1,1559534400,ROW road,approved in time,25
+261,obj2kr1,1560139200,ROW road,approved in time,46
+262,obj2kr1,1560744000,ROW road,approved in time,54
+263,obj2kr1,1561348800,ROW road,approved in time,55
+264,obj2kr1,1561953600,ROW road,approved in time,58
+265,obj2kr1,1561953600,ROW curb,approved in time,0
+266,obj2kr2,1557115200,H&S violations,compliance perc,19
+267,obj2kr2,1557720000,H&S violations,compliance perc,17
+268,obj2kr2,1558324800,H&S violations,compliance perc,19
+269,obj2kr2,1558411200,H&S violations,compliance perc,21
+270,obj2kr2,1558929600,H&S violations,compliance perc,19
+271,obj2kr2,1559534400,H&S violations,compliance perc,11
+272,obj2kr2,1560139200,H&S violations,compliance perc,11
+273,obj2kr2,1560744000,H&S violations,compliance perc,11
+274,obj2kr2,1561348800,H&S violations,compliance perc,12
+275,obj2kr2,1561953600,H&S violations,compliance perc,11
+276,obj2kr2,1557115200,other violations,compliance perc,31
+277,obj2kr2,1557720000,other violations,compliance perc,30
+278,obj2kr2,1558324800,other violations,compliance perc,32
+279,obj2kr2,1558411200,other violations,compliance perc,32
+280,obj2kr2,1558929600,other violations,compliance perc,32
+281,obj2kr2,1559534400,other violations,compliance perc,37
+282,obj2kr2,1560139200,other violations,compliance perc,41
+283,obj2kr2,1560744000,other violations,compliance perc,43
+284,obj2kr2,1561348800,other violations,compliance perc,45
+285,obj2kr2,1561953600,other violations,compliance perc,45
+286,obj2kr3,1557115200,census tract calls,perc change in calls,-4
+287,obj2kr3,1557720000,census tract calls,perc change in calls,9
+288,obj2kr3,1558324800,census tract calls,perc change in calls,7
+289,obj2kr3,1558411200,census tract calls,perc change in calls,16
+290,obj2kr3,1558929600,census tract calls,perc change in calls,25
+291,obj2kr3,1559534400,census tract calls,perc change in calls,16
+292,obj2kr3,1560139200,census tract calls,perc change in calls,17
+293,obj2kr3,1560744000,census tract calls,perc change in calls,7
+294,obj2kr3,1561348800,census tract calls,perc change in calls,-9
+295,obj2kr3,1561953600,census tract calls,perc change in calls,-12
+296,obj3kr1,1559620800,comments,perc difference,-32
+297,obj3kr1,1560139200,comments,perc difference,-54
+298,obj3kr1,1560744000,comments,perc difference,-56
+299,obj3kr1,1561348800,comments,perc difference,-47
+300,obj3kr1,1561953600,comments,perc difference,-36
+301,obj3kr1,1559620800,reactions,perc difference,25
+302,obj3kr1,1560139200,reactions,perc difference,-13
+303,obj3kr1,1560744000,reactions,perc difference,-21
+304,obj3kr1,1561348800,reactions,perc difference,-20
+305,obj3kr1,1561953600,reactions,perc difference,-12
+306,obj3kr1,1559620800,shares,perc difference,-40
+307,obj3kr1,1560139200,shares,perc difference,-62
+308,obj3kr1,1560744000,shares,perc difference,-65
+309,obj3kr1,1561348800,shares,perc difference,-62
+310,obj3kr1,1561953600,shares,perc difference,-46
+311,obj3kr2,1557115200,cityline satisfaction,satisfaction percentage,60
+312,obj3kr2,1557201600,cityline satisfaction,satisfaction percentage,62
+313,obj3kr2,1557720000,cityline satisfaction,satisfaction percentage,68
+314,obj3kr2,1558411200,cityline satisfaction,satisfaction percentage,58
+315,obj3kr2,1558929600,cityline satisfaction,satisfaction percentage,50
+316,obj3kr2,1559534400,cityline satisfaction,satisfaction percentage,43
+317,obj3kr2,1559620800,cityline satisfaction,satisfaction percentage,46
+318,obj3kr2,1560139200,cityline satisfaction,satisfaction percentage,46
+319,obj3kr2,1560744000,cityline satisfaction,satisfaction percentage,46
+320,obj3kr2,1561348800,cityline satisfaction,satisfaction percentage,51
+321,obj3kr2,1561953600,cityline satisfaction,satisfaction percentage,63
+322,obj3kr3,1557115200,census tracts,perc change in calls,-10
+323,obj3kr3,1557201600,census tracts,perc change in calls,0
+324,obj3kr3,1557720000,census tracts,perc change in calls,-10
+325,obj3kr3,1558411200,census tracts,perc change in calls,-10
+326,obj3kr3,1558929600,census tracts,perc change in calls,-20
+327,obj3kr3,1559534400,census tracts,perc change in calls,-5.2
+328,obj3kr3,1559620800,census tracts,perc change in calls,-3.3
+329,obj3kr3,1560139200,census tracts,perc change in calls,-8.7
+330,obj3kr3,1560744000,census tracts,perc change in calls,-16.4
+331,obj3kr3,1561348800,census tracts,perc change in calls,-19.9
+332,obj3kr3,1561953600,census tracts,perc change in calls,-19.1
+333,obj4kr1,1557115200,potholes,perc closed in time,100
+334,obj4kr1,1558411200,potholes,perc closed in time,75
+335,obj4kr1,1558929600,potholes,perc closed in time,77
+336,obj4kr1,1559534400,potholes,perc closed in time,72
+337,obj4kr1,1560139200,potholes,perc closed in time,72
+338,obj4kr1,1560744000,potholes,perc closed in time,42
+339,obj4kr1,1561348800,potholes,perc closed in time,30
+340,obj4kr1,1561953600,potholes,perc closed in time,35
+341,obj4kr1,1557115200,no_heat,perc closed in time,91
+342,obj4kr1,1558411200,no_heat,perc closed in time,100
+343,obj4kr1,1558929600,no_heat,perc closed in time,100
+344,obj4kr1,1559534400,no_heat,perc closed in time,100
+345,obj4kr1,1560139200,no_heat,perc closed in time,100
+346,obj4kr1,1560744000,no_heat,perc closed in time,100
+347,obj4kr1,1561348800,no_heat,perc closed in time,100
+348,obj4kr1,1561953600,no_heat,perc closed in time,100
+349,obj4kr1,1557115200,trash,perc closed in time,87
+350,obj4kr1,1558411200,trash,perc closed in time,100
+351,obj4kr1,1558929600,trash,perc closed in time,100
+352,obj4kr1,1559534400,trash,perc closed in time,100
+353,obj4kr1,1560139200,trash,perc closed in time,100
+354,obj4kr1,1560744000,trash,perc closed in time,100
+355,obj4kr1,1561348800,trash,perc closed in time,97
+356,obj4kr1,1561953600,trash,perc closed in time,94
+357,obj4kr1,1557115200,fire_response,perc closed in time,91
+358,obj4kr1,1558411200,fire_response,perc closed in time,93
+359,obj4kr1,1558929600,fire_response,perc closed in time,94
+360,obj4kr1,1559534400,fire_response,perc closed in time,94
+361,obj4kr1,1560139200,fire_response,perc closed in time,94
+362,obj4kr1,1560744000,fire_response,perc closed in time,94
+363,obj4kr1,1561348800,fire_response,perc closed in time,97
+364,obj4kr1,1561953600,fire_response,perc closed in time,94
+365,obj4kr1,1558411200,police_response,perc closed in time,79
+366,obj4kr1,1558929600,police_response,perc closed in time,80
+367,obj4kr1,1559534400,police_response,perc closed in time,80
+368,obj4kr1,1560139200,police_response,perc closed in time,80
+369,obj4kr1,1560744000,police_response,perc closed in time,77
+370,obj4kr1,1561348800,police_response,perc closed in time,77
+371,obj4kr1,1561953600,police_response,perc closed in time,74
+372,obj4kr1,1558411200,overgrowth,perc closed in time,88
+373,obj4kr1,1558929600,overgrowth,perc closed in time,84
+374,obj4kr1,1559534400,overgrowth,perc closed in time,86
+375,obj4kr1,1560139200,overgrowth,perc closed in time,86
+376,obj4kr1,1560744000,overgrowth,perc closed in time,85
+377,obj4kr1,1561348800,overgrowth,perc closed in time,86
+378,obj4kr1,1561953600,overgrowth,perc closed in time,82
+379,obj4kr2,1557115200,potholes,perc one time visit,68
+380,obj4kr2,1557720000,potholes,perc one time visit,68
+381,obj4kr2,1558411200,potholes,perc one time visit,68
+382,obj4kr2,1558929600,potholes,perc one time visit,68
+383,obj4kr2,1559534400,potholes,perc one time visit,68
+384,obj4kr2,1560139200,potholes,perc one time visit,68
+385,obj4kr2,1560744000,potholes,perc one time visit,68
+386,obj4kr2,1561348800,potholes,perc one time visit,68
+387,obj4kr2,1561953600,potholes,perc one time visit,68
+388,obj4kr2,1557115200,sewer,perc one time visit,88
+389,obj4kr2,1557720000,sewer,perc one time visit,88
+390,obj4kr2,1558411200,sewer,perc one time visit,88
+391,obj4kr2,1558929600,sewer,perc one time visit,88
+392,obj4kr2,1559534400,sewer,perc one time visit,88
+393,obj4kr2,1560139200,sewer,perc one time visit,88
+394,obj4kr2,1560744000,sewer,perc one time visit,88
+395,obj4kr2,1561348800,sewer,perc one time visit,89
+396,obj4kr2,1561953600,sewer,perc one time visit,88
+397,obj4kr2,1557115200,blue bins,perc one time visit,86
+398,obj4kr2,1557720000,blue bins,perc one time visit,86
+399,obj4kr2,1558411200,blue bins,perc one time visit,86
+400,obj4kr2,1558929600,blue bins,perc one time visit,86
+401,obj4kr2,1559534400,blue bins,perc one time visit,85
+402,obj4kr2,1560139200,blue bins,perc one time visit,85
+403,obj4kr2,1560744000,blue bins,perc one time visit,85
+404,obj4kr2,1561348800,blue bins,perc one time visit,85
+405,obj4kr2,1561953600,blue bins,perc one time visit,84
+406,obj4kr2,1557115200,water mains,perc one time visit,88
+407,obj4kr2,1557720000,water mains,perc one time visit,89
+408,obj4kr2,1558411200,water mains,perc one time visit,89
+409,obj4kr2,1558929600,water mains,perc one time visit,88
+410,obj4kr2,1559534400,water mains,perc one time visit,88
+411,obj4kr2,1560139200,water mains,perc one time visit,88
+412,obj4kr2,1560744000,water mains,perc one time visit,88
+413,obj4kr2,1561348800,water mains,perc one time visit,88
+414,obj4kr2,1561953600,water mains,perc one time visit,88
+415,obj4kr2,1557115200,trash,perc one time visit,84
+416,obj4kr2,1557720000,trash,perc one time visit,84
+417,obj4kr2,1558411200,trash,perc one time visit,85
+418,obj4kr2,1558929600,trash,perc one time visit,85
+419,obj4kr2,1559534400,trash,perc one time visit,85
+420,obj4kr2,1560139200,trash,perc one time visit,85
+421,obj4kr2,1560744000,trash,perc one time visit,85
+422,obj4kr2,1561348800,trash,perc one time visit,85
+423,obj4kr2,1561953600,trash,perc one time visit,85
+424,obj4kr2,1557115200,overgrowth,perc one time visit,85
+425,obj4kr2,1557720000,overgrowth,perc one time visit,85
+426,obj4kr2,1558411200,overgrowth,perc one time visit,84
+427,obj4kr2,1558929600,overgrowth,perc one time visit,84
+428,obj4kr2,1559534400,overgrowth,perc one time visit,84
+429,obj4kr2,1560139200,overgrowth,perc one time visit,85
+430,obj4kr2,1560744000,overgrowth,perc one time visit,86
+431,obj4kr2,1561348800,overgrowth,perc one time visit,86
+432,obj4kr2,1561953600,overgrowth,perc one time visit,85
+433,obj4kr2,1558411200,malfunctioning alarms,perc one time visit,78
+434,obj4kr2,1558929600,malfunctioning alarms,perc one time visit,79
+435,obj4kr2,1559534400,malfunctioning alarms,perc one time visit,78
+436,obj4kr2,1560139200,malfunctioning alarms,perc one time visit,78
+437,obj4kr2,1560744000,malfunctioning alarms,perc one time visit,79
+438,obj4kr2,1561348800,malfunctioning alarms,perc one time visit,79
+439,obj4kr2,1561953600,malfunctioning alarms,perc one time visit,79
