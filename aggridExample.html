@@ -1,69 +1,6 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
-    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
-  </head>
-  <body>
-        <script src="https://d3js.org/d3-dsv.v1.min.js">
-        </script> 
-        <script src="https://d3js.org/d3-array.v2.min.js">
-        </script> <!-- CUSTOM SCRIPTS-->
-         
-        <script src="JS/scripts.js"></script>
-
-
-  <script type="text/javascript" charset="utf-8">
-  	async function dataRun(){ 
-				var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
-                combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
-                var Object2DataSet = combinationDataCSVGroup.get('obj1kr1').get(undefined);
-                console.log(Object2DataSet);
-    // specify the columns"","OKR","date_or_period","category_or_dept","variable","value"
-    var columnDefs = [
-      {headerName: "OKR", field: "OKR", sortable: true},
-      {headerName: "value", 
-      field: "value",
-      sortable: true,
-      
-      cellStyle: function(params) {
-        if (params.value>0) {
-            //mark police cells as red
-            return {color: 'green'};
-        }
-        else if(params.value<0){
-            return {color: 'red'};
-        } 
-        else {
-            return null;
-        }
-    }
     
-    },
-      {headerName: "category_or_dept", field: "category_or_dept",sortable: true, filter: 'agTextColumnFilter'}
-    ];
 
-    // let the grid know which columns to use
-    var gridOptions = {
-      columnDefs: columnDefs,
-      pagination:true
-    };
-
-  // lookup the container we want the Grid to use
-  var eGridDiv = document.querySelector('#myGrid');
-
-  // create the grid passing in the div to use together with the columns & data we want to use
-  new agGrid.Grid(eGridDiv, gridOptions);
-
-  gridOptions.api.setRowData(Object2DataSet);
-  gridOptions.api.sizeColumnsToFit();
-
-      }
-			dataRun();
-  </script>
-  </body>
-</html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,6 +29,74 @@
 
         gtag('config', 'UA-66477210-5');
     </script>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+        <script src="https://d3js.org/d3-dsv.v1.min.js">
+        </script> 
+        <script src="https://d3js.org/d3-array.v2.min.js">
+        </script> <!-- CUSTOM SCRIPTS-->
+         
+        <script src="JS/scripts.js"></script>
+
+
+  <script type="text/javascript" charset="utf-8">
+  
+
+  async function dataRun(){ 
+				var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
+                combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
+                var Object2DataSet = combinationDataCSVGroup.get('obj1kr1').get(undefined);
+                console.log(Object2DataSet);
+                return Object2DataSet;
+  }
+  var columnDefs = [
+      {headerName: "OKR", field: "OKR", sortable: true},
+      {headerName: "value", 
+      field: "value",
+      sortable: true,
+      
+      cellStyle: function(params) {
+        if (params.value>0) {
+            //mark police cells as red
+            return {color: 'green'};
+        }
+        else if(params.value<0){
+            return {color: 'red'};
+        } 
+        else {
+            return null;
+        }
+    }
+    
+    },
+      {headerName: "category_or_dept", field: "category_or_dept",sortable: true, filter: 'agTextColumnFilter'}
+    ];
+
+    // let the grid know which columns to use
+    var gridOptions = {
+      columnDefs: columnDefs,
+      pagination:true
+    };
+ dataRun().then(function(data){
+    // specify the columns"","OKR","date_or_period","category_or_dept","variable","value"
+    
+
+  // lookup the container we want the Grid to use
+  var eGridDiv = document.querySelector('#myGrid');
+
+  // create the grid passing in the div to use together with the columns & data we want to use
+  new agGrid.Grid(eGridDiv, gridOptions);
+
+  gridOptions.api.setRowData(data);
+  gridOptions.api.sizeColumnsToFit();
+  onFilterTextBoxChanged(); 
+});
+            
+            function onFilterTextBoxChanged() {
+    gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
+}
+  </script>
 </head>
 
 <body>
@@ -147,6 +152,8 @@
             <div class="row">
 
                 <div class="col-md-12">
+                        <input type="text" id="filter-text-box" placeholder="Filter..." oninput="onFilterTextBoxChanged()"/>
+
                         <div id="myGrid" style="height: 500px;width:1000px;" class="ag-theme-balham"></div>
 
 
