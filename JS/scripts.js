@@ -136,7 +136,7 @@ var start = 0;
         // URL: String type
         // Type: ASYNC
         async function getData(url) {
-            const response = await fetch(url);
+            const response = await fetch(url, {cache:"no-cache"}); 
             const data = await response.text();
 
             return data;
@@ -147,7 +147,7 @@ var start = 0;
             var data2 = await getData(url2);
             var data3 = await getData(url3);
             return [data1, data2, data3];
-        };
+        }; 
         // Function: Generates a Chart JS Chart
         // xAxisLabel - Array of lables
         // xAxis - Array of labels for the x axis
@@ -293,9 +293,8 @@ var start = 0;
         // TYPE: ASYNC
         // Return: Text Data Object
         async function getData(url) {
-            const response = await fetch(url);
-
-            const data = await response.text();
+            const response = await fetch(url, {cache: "no-cache"});
+             const data = await response.text();
             return data;
         };
         
