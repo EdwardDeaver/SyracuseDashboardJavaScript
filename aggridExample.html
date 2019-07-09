@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-    
 
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,11 +10,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Objective: Increase economic investment and neighborhood stability</title>
     <!-- Custom CSS-->
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet"><!-- Bootstrap -->
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- font awesome-->
-    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet"><!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,9 +27,14 @@
 
         gtag('config', 'UA-66477210-5');
     </script>
-    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+
+</head>
+
+<body>
+        <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+
         <script src="https://d3js.org/d3-dsv.v1.min.js">
         </script> 
         <script src="https://d3js.org/d3-array.v2.min.js">
@@ -46,9 +49,8 @@
   async function dataRun(){ 
 				var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
                 combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
-                var Object2DataSet = combinationDataCSVGroup.get('obj1kr1').get(undefined);
-                console.log(Object2DataSet);
-                return Object2DataSet;
+                var combinationDataCSVGroup = combinationDataCSVGroup.get('obj1kr1').get(undefined);
+                return combinationDataCSVGroup;
   }
   var columnDefs = [
       {headerName: "OKR", field: "OKR", sortable: true},
@@ -76,13 +78,20 @@
     // let the grid know which columns to use
     var gridOptions = {
       columnDefs: columnDefs,
-      pagination:true
+      pagination:true,
+      
+      onGridReady(params) {
+        this.gridApi = params.api;
+        this.columnApi = params.columnApi;
+        this.gridApi.sizeColumnsToFit();
+        window.onresize = () => {
+            this.gridApi.sizeColumnsToFit();
+        }
+}
     };
  dataRun().then(function(data){
     // specify the columns"","OKR","date_or_period","category_or_dept","variable","value"
-    
-
-  // lookup the container we want the Grid to use
+     // lookup the container we want the Grid to use
   var eGridDiv = document.querySelector('#myGrid');
 
   // create the grid passing in the div to use together with the columns & data we want to use
@@ -90,26 +99,19 @@
 
   gridOptions.api.setRowData(data);
   gridOptions.api.sizeColumnsToFit();
-  onFilterTextBoxChanged(); 
+  gridOptions.api.setDomLayout('autoHeight');
+    // auto height will get the grid to fill the height of the contents,
+    // so the grid div should have no height set, the height is dynamic.
+    document.querySelector('#myGrid').style.height = '';
+    eGridDiv.style.width = '100%';
+    eGridDiv.style.height = '100%';
+  
 });
-            
+    
             function onFilterTextBoxChanged() {
     gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
 }
   </script>
-</head>
-
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0">
-    </script>
-    <script src="https://d3js.org/d3-dsv.v1.min.js">
-    </script>
-    <script src="https://d3js.org/d3-array.v2.min.js">
-    </script>
-    <!-- CUSTOM SCRIPTS-->
-
-    <script src="JS/scripts.js">
-    </script>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">City of Syracuse <i class="fas fa-chart-line"></i></a>
@@ -150,11 +152,14 @@
        
         <a class="nav-link">
             <div class="row">
+                    <input type="text" id="filter-text-box" placeholder="Filter..." oninput="onFilterTextBoxChanged()"/>
 
-                <div class="col-md-12">
-                        <input type="text" id="filter-text-box" placeholder="Filter..." oninput="onFilterTextBoxChanged()"/>
+                <div class="col-md-12" style="display: flex; flex-direction: row">
 
-                        <div id="myGrid" style="height: 500px;width:1000px;" class="ag-theme-balham"></div>
+                                <div style=" overflow: hidden; flex-grow: 1">
+
+                                  <div id="myGrid" class="col-md-12 ag-theme-balham" style="height: 100vh; width: 100%;"></div>  
+                                </div>
 
 
                 </div>
