@@ -17,7 +17,10 @@
 436,obj1kr1,potholes,potholes,98,68,68
 445,obj1kr1,sewer,sewer,34,88,88
 446,obj1kr1,Water,Water,34,12,13
-
+372,obj1kr2,fire_response,cityline satisfaction,34,45,6
+373,obj1kr2,police_response,cityline satisfaction,50,61,2
+374,obj1kr2,overgrowth,cityline satisfaction,34,65,34
+375,obj1kr2,potholes,cityline satisfaction,34,62,34
 372,obj1kr2,fire_response,cityline satisfaction,34,45,6
 373,obj1kr2,police_response,cityline satisfaction,50,61,2
 374,obj1kr2,overgrowth,cityline satisfaction,34,65,34

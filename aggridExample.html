@@ -29,7 +29,11 @@
     </script>
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
-
+<style>
+div[role=row] div:nth-child(1){
+    font-weight:bold;
+}
+</style>
 </head>
 
 <body>
@@ -46,12 +50,13 @@
   <script type="text/javascript" charset="utf-8">
   
 
-  async function dataRun(){ 
+  async function dataRun(key){ 
 				var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
                 combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
-                var combinationDataCSVGroup = combinationDataCSVGroup.get('obj1kr1').get(undefined);
+                var combinationDataCSVGroup = combinationDataCSVGroup.get(key).get(undefined);
                 return combinationDataCSVGroup;
   }
+
   var columnDefs = [
       {headerName: "OKR", field: "OKR", sortable: true},
       {headerName: "value", 
@@ -89,7 +94,15 @@
         }
 }
     };
- dataRun().then(function(data){
+
+    
+            function onFilterTextBoxChanged() {
+    gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
+}
+  </script>
+
+  <script>
+   dataRun('obj1kr1').then(function(data){
     // specify the columns"","OKR","date_or_period","category_or_dept","variable","value"
      // lookup the container we want the Grid to use
   var eGridDiv = document.querySelector('#myGrid');
@@ -107,10 +120,6 @@
     eGridDiv.style.height = '100%';
   
 });
-    
-            function onFilterTextBoxChanged() {
-    gridOptions.api.setQuickFilter(document.getElementById('filter-text-box').value);
-}
   </script>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
