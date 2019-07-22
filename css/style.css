@@ -267,6 +267,9 @@ table.myTable tr {
 .category-title-alt{
   font-style: italic;
 }
+.active{
+	border-bottom:1px solid #000000 ;
+  }
 nav div ul .active{
   border-bottom:1px solid #000000 ;
 }
