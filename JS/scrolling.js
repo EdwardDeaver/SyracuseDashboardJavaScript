@@ -29,7 +29,7 @@
 				window.requestAnimationFrame(scrollToTop);
 				// ScrollTo takes an x and a y coordinate.
 				// Increase the '10' value to get a smoother/slower scroll!
-				window.scrollTo(0, c - c / 10);
+				window.scrollTo(0, c - c / 5);
 			  }
 			};
 			
