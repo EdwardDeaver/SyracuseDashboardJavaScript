@@ -55,7 +55,7 @@
        		setIndicators(ArrayOfValues2[2], DataContainerElemenets.getElementsByClassName("spent_dollars"), "number");
        		setIndicators(ArrayOfValues2[3], DataContainerElemenets.getElementsByClassName("unspent_dollars"), "number");
        		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
-       		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("dot"), "color");
+       		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
 
        	}
        	else
@@ -78,13 +78,13 @@
        	if (mode == 1)
        	{
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
-       		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color");
+       		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
        		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
        	}
        	if (mode == 2)
        	{
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
-       		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color");
+       		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
        		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
        		setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
        	}
@@ -219,8 +219,43 @@
        		return [project_dollars, authorized_dollars, spent_dollars, unspent_dollars, value];
 
 
-       	}
+		   }
+		   
+		   if (mode == 4)
+       	{
+       		var cardDescription = [];
+       		var on_time = [];
+       		var out_of_total = [];
+       		var dataDescription = [];
+			   var timeDescription = [];
+			   var movement = [];
+       		//data = filteredDataObject = d3.group(data, d => d.category_or_dept);
+			console.log('Getting the array values', data);
+       			for (i = 0; i < data.length; i++)
+       			{
+					console.log("Data from object", data[i]);
 
+
+       				//   console.log(element[0].category_or_dept);
+       				//console.log("Category", DataFromObject[i]);
+
+       				//     console.log("TITLE REACHED");
+       				//console.log("DataFromObject", DataFromObject[i]);
+       				cardDescription.push(data[i].cardDescription);
+
+       				on_time.push(data[i].on_time);
+       				out_of_total.push(data[i].out_of_total);
+       				dataDescription.push(data[i].dataDescription);
+					   timeDescription.push(data[i].timeDescription);
+					   movement.push(data[i].movement);
+
+
+       			};
+
+       		return [cardDescription, on_time, out_of_total, dataDescription, timeDescription,movement];
+
+
+		   }
        };
 
 
@@ -439,34 +474,73 @@
        // domElementL is a Array of span tags in the elebt
        // TYPE: ASYNC
 
-       async function setIndicators(percentageCalculation, domElement, typeToSet)
+       async function setIndicators(percentageCalculation, domElement, typeToSet, mode)
        {
        	//console.log("DOM ELEMENT OF SPAN", domElement);
        	//console.log("FitredData in Load charts", percentageCalculation);
 
-       	if (typeToSet == "color")
-       	{
-       		[].slice.call(domElement).forEach((div, index) =>
-       		{
-       			//   console.log("DIV COLOR INDICATORS", div);
+       	if (typeToSet == "color"){
+			if(mode==1){
+				[].slice.call(domElement).forEach((div, index) =>{
+					//   console.log("DIV COLOR INDICATORS", div);
+					if (div !== undefined){
+						if (percentageCalculation[index] >= 95)
+						{
+							div.className = "dot greendot";
+						}
+						if (percentageCalculation[index] < 95 && percentageCalculation[index] >= 74)
+						{
+							div.className = "dot yellowdot";
+						}
+						if (percentageCalculation[index] < 74)
+						{
+							div.className = "dot reddot";
 
-       			if (div !== undefined)
-       			{
-       				if (percentageCalculation[index] >= 95)
-       				{
-       					div.className = "dot greendot";
-       				}
-       				if (percentageCalculation[index] < 95 && percentageCalculation[index] >= 74)
-       				{
-       					div.className = "dot yellowdot";
-       				}
-       				if (percentageCalculation[index] < 74)
-       				{
-       					div.className = "dot reddot";
+						}
+					}
+				});
+			}
+			if(mode==2){
+				[].slice.call(domElement).forEach((div, index) =>{
+					   console.log("DIV COLOR INDICATORS", div);
+					if (div !== undefined){
+						if (percentageCalculation[index] ==1)
+						{
+							div.className = "card-header bg-success";
+						}
+						if (percentageCalculation[index] == 0)
+						{
+							div.className = "card-header  bg-warning";
+						}
+						if (percentageCalculation[index] ==-1)
+						{
+							div.className = "card-header bg-danger";
 
-       				}
-       			}
-       		});
+						}
+					}
+				});
+			}
+
+			if(mode==3){
+				[].slice.call(domElement).forEach((div, index) =>{
+					   console.log("DIV COLOR INDICATORS", div);
+					if (div !== undefined){
+						if (percentageCalculation[index] ==1)
+						{
+							div.className = "indicator fas  fa-arrow-up";
+						}
+						if (percentageCalculation[index] == 0)
+						{
+							div.className = "indicator fas  fa-arrows-alt-h";
+						}
+						if (percentageCalculation[index] ==-1)
+						{
+							div.className = "indicator fas fa-arrow-down";
+
+						}
+					}
+				});
+			}
        	};
        	if (typeToSet == "number")
        	{
@@ -479,5 +553,35 @@
        			}
        		});
        	};
+
+	   }
+	   async function generateKeyBoxResult(key, TargetName, data)       {
+       //	console.log("data from generateobjectiv1", combinationData);
+	   dataCSV = d3.group(await d3.csvParse(data), d => d.obj, d => d.Name);
+	   console.log(dataCSV);
+       	var dataCSVGrouped = dataCSV.get(key).get(undefined);
+       	console.log("the comimbination data csv", dataCSVGrouped);
+       	var DataContainerElemenets = document.getElementsByName(TargetName)[0];
+       	console.log("Data container", DataContainerElemenets)
+
+       	ArrayOfValues = await getCategoryDeptValues(dataCSVGrouped, 4).then(async function (data)
+       	{
+       		return data;
+		   });
+		   console.log("MOVEMENT", ArrayOfValues[5]);
+
+		   ArrayOfValues[5] = ArrayOfValues[5].map(Number);
+		   console.log("MOVEMENT", ArrayOfValues[5]);
+console.log("Array of values in generate", ArrayOfValues);
+console.log(DataContainerElemenets);
+console.log(DataContainerElemenets.getElementsByClassName("goalMessage"));
+setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("goalMessage"), "number");
+setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
+setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
+setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataDescription"), "number");
+setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("timeDescription"), "number");
+setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("card-header"), "color", 2);
+setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("indicator"), "color", 3);
+
 
        }
