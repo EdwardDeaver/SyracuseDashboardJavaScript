@@ -56,6 +56,7 @@
        		setIndicators(ArrayOfValues2[3], DataContainerElemenets.getElementsByClassName("unspent_dollars"), "number");
        		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
        		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
+			   setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
 
        	}
        	else
@@ -66,27 +67,31 @@
 
        	if (keyMode == 1)
        	{
-       		setIndicators(ArrayofKeyResults[0], DataContainerElemenets.getElementsByClassName("dataSectpercentData"), "number");
+       		setIndicators(ArrayofKeyResults[0], DataContainerElemenets.getElementsByClassName("dataSectTitlePercentData"), "number");
        	}
        	if (keyMode == 2)
        	{
-       		setIndicators(ArrayofKeyResults[0], DataContainerElemenets.getElementsByClassName("dataSectpercentData"), "number");
-       		setIndicators(ArrayofKeyResults[1], DataContainerElemenets.getElementsByClassName("dataSectNumeratorData"), "number");
-       		setIndicators(ArrayofKeyResults[2], DataContainerElemenets.getElementsByClassName("dataSectDenominatorData"), "number");
+       		setIndicators(ArrayofKeyResults[0], DataContainerElemenets.getElementsByClassName("dataSectTitlePercentData"), "number");
+       		setIndicators(ArrayofKeyResults[1], DataContainerElemenets.getElementsByClassName("dataSectTitleNumeratorData"), "number");
+       		setIndicators(ArrayofKeyResults[2], DataContainerElemenets.getElementsByClassName("dataSectTitleDenominatorData"), "number");
 
            }
        	if (mode == 1)
        	{
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
-       		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
+			   setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
+			   setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
+
        	}
        	if (mode == 2)
        	{
+			   console.log(ArrayOfValues, DataContainerElemenets.getElementsByClassName("dataSectNumerator"));
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
        		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
-       		setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
+			   setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
+			   setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
        	}
 
        }
@@ -140,7 +145,8 @@
        	{
        		var arrayOfValues = [];
        		var arrayOfDenominator = [];
-       		var arrayOfNumerator = [];
+			   var arrayOfNumerator = [];
+			var nameOfCategory = [];
        		data = filteredDataObject = d3.group(data, d => d.category_or_dept);
 
        		data.forEach((DataFromObject, index) =>
@@ -170,7 +176,8 @@
        					arrayOfValues.push(DataFromObject[i].value);
 
        					arrayOfDenominator.push(DataFromObject[i].out_of_total);
-       					arrayOfNumerator.push(DataFromObject[i].on_time)
+						   arrayOfNumerator.push(DataFromObject[i].on_time);
+						   nameOfCategory.push(DataFromObject[i].category_or_dept);
        				}
        				start = start + 1;
 
@@ -178,7 +185,7 @@
 
        		});
        		arrayOfValues = arrayOfValues.map(Number);
-       		return [arrayOfValues, arrayOfDenominator, arrayOfNumerator];
+       		return [arrayOfValues, arrayOfDenominator, arrayOfNumerator, nameOfCategory];
        	}
        	if (mode == 3)
        	{
@@ -186,7 +193,8 @@
        		var authorized_dollars = [];
        		var spent_dollars = [];
        		var unspent_dollars = [];
-       		var value = [];
+			   var value = [];
+			   var nameOfCategory = [];
        		data = filteredDataObject = d3.group(data, d => d.category_or_dept);
 
        		data.forEach((DataFromObject, index) =>
@@ -210,13 +218,13 @@
        				spent_dollars.push(DataFromObject[i].spent_dollars);
        				unspent_dollars.push(DataFromObject[i].unspent_dollars);
        				value.push(DataFromObject[i].value);
-
+					   nameOfCategory.push(DataFromObject[i].category_or_dept);
        				start = start + 1;
 
        			};
 
        		});
-       		return [project_dollars, authorized_dollars, spent_dollars, unspent_dollars, value];
+       		return [project_dollars, authorized_dollars, spent_dollars, unspent_dollars, value, nameOfCategory];
 
 
 		   }
