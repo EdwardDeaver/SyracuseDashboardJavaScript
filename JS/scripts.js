@@ -95,6 +95,10 @@ async function generateKeyResult(key, TargetName, mode, keyMode, combinationData
 	}
 delete combinationDataCSVGroup;
 delete Object2DataSet;
+delete ArrayofKeyResults;
+delete ArrayofKeyResults2;
+delete combinedPercentDataCSV;
+delete combinedCSV;
 }
 // Function: constructDataForMaps
 // Purpose construct the data and generate the charts
