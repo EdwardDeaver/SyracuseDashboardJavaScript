@@ -1,3 +1,4 @@
+
 // Function: Generate Key Result
 // Purpose to genrate the data in a key result
 // Variables:
@@ -560,6 +561,12 @@
        				domElement[index].innerHTML = element;
        			}
        		});
+		   };
+		   if (typeToSet == "date")
+       	{
+       		for(i =0; i<domElement.length;i++){
+				   domElement[i].innerHTML = percentageCalculation;
+			   }
        	};
 
 	   }
@@ -592,4 +599,21 @@ setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("c
 setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("indicator"), "color", 3);
 
 
-       }
+	   }
+	   
+	   async function dateData(url){
+		var dateData =   await getData(url).then(async function(data) {return data;});
+		dateData = JSON.parse(dateData);
+		date = new Date(dateData[0].commit.author.date );
+		months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
+		return ""+months[date.getMonth()]+" "+date.getDate();
+
+}
+
+async function setDateData(url,TargetName){
+	dateData =  await dateData(url);
+	var DataContainerElemenets = document.getElementsByName(TargetName)[0];
+	setIndicators(dateData, DataContainerElemenets.getElementsByClassName("date"), "date");
+
+
+}
