@@ -244,8 +244,8 @@
 				</div>
 			</div><!-- Start of Data -->
 			<div class="row">
-			<div class="col-lg-4  form-group">
-					<div class="card lg-4">
+			<div class="col-md-4  form-group">
+					<div class="card md-4">
 						<div class="card-header bg-warning"><span class="progesssMessage">On Our Way</span></div>
 							<div class="card-body">
 							  <h6 class="card-title"><span class="goalMessage"></span></h6>
@@ -255,8 +255,8 @@
 							</div>
 					</div>
 				</div>
-				<div class=" col-lg-4  form-group">
-						<div class="card lg-4">
+				<div class=" col-md-4  form-group">
+						<div class="card md-4">
 							<div class="card-header bg-warning"><span class="progesssMessage">On Our Way</span></div>
 								<div class="card-body">
 								  <h6 class="card-title"><span class="goalMessage"></span></h6>
@@ -266,8 +266,8 @@
 								</div>
 						</div>
 					</div>
-					<div class=" col-lg-4  form-group">
-							<div class="card lg-4">
+					<div class=" col-md-4  form-group">
+							<div class="card md-4">
 								<div class="card-header bg-warning"><span class="progesssMessage">On Our Way</span></div>
 									<div class="card-body">
 									  <h6 class="card-title"><span class="goalMessage"></span></h6>
@@ -290,6 +290,7 @@
 		</div>
 	</footer>
 	<script>
+		var date;
 			async function dataRun(){ 
 				var combinationData =   await getData('data/mainPageData.csv').then(async function(data) {return data;});
 				console.log(combinationData);
@@ -298,8 +299,10 @@
 				await generateKeyBoxResult("obj3", "objective3",combinationData);
 				await generateKeyBoxResult("obj4", "objective4",combinationData);
 
+			console.log("INDEX DATE", document.date);
 			};
 			dataRun();
+
 		//generateKeyResult('obj1kr2', "keyResult2", 1);
 
 

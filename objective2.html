@@ -94,7 +94,7 @@
 			</div>
 			<div class="col-md-4">
 				<p><span class="category-title dataTitle"></span>:<br>
-				<span class="category-title-alt">Building permits issued within 6 weeks.</span> Permits issued on-time in the 30-day period ending June 24:  
+				<span class="category-title-alt">Building permits issued within 6 weeks.</span> Permits issued on-time in the 30-day period ending <span class="date"></span>:  
               <span class="category-title"><span class="dataSectNumerator"></span> out of <span class="dataSectDenominator"></span></span></p>
 			</div>
 			<div class="col-md-3">
@@ -116,7 +116,7 @@
 			</div>
 			<div class="col-md-4">
 				<p><span class="category-title dataTitle"></span>:<br>
-				<span class="category-title-alt">Building permits issued within 2 weeks.</span> Permits issued on-time in the 30-day period ending June 24:  
+				<span class="category-title-alt">Building permits issued within 2 weeks.</span> Permits issued on-time in the 30-day period ending <span class="date"></span>:  
             </span>  <span class="category-title"><span class="dataSectNumerator"></span> out of <span class="dataSectDenominator"></span></span></p>
 			</div>
 			<div class="col-md-3">
@@ -139,7 +139,7 @@
 			<div class="col-md-4">
 				<p><span class="category-title dataTitle"></span>:<br>
 				<span class="category-title-alt">Building permits issued within 4 weeks.</span> Permits issued on-time in the 30-day 
-           period ending June 24:  <span class="category-title"><span class="dataSectNumerator"></span>  out of <span class="dataSectDenominator"></span></span></p>
+           period ending <span class="date"></span>:  <span class="category-title"><span class="dataSectNumerator"></span>  out of <span class="dataSectDenominator"></span></span></p>
 			</div>
 			<div class="col-md-3">
 				<h2><span class="percentOnTime"></span>% On-time</h2>
@@ -162,7 +162,7 @@
                 <div class="col-md-4">
                     <p><span class="category-title dataTitle"></span>:<br>
                     <span class="category-title-alt">Building permits issued within 8 weeks.
-            </span>Permits issued on-time in the 30-day period ending June 24:   <span class="category-title"><span class="dataSectNumerator"></span> out of <span class="dataSectDenominator"></span></span></p>
+            </span>Permits issued on-time in the 30-day period ending <span class="date"></span>:   <span class="category-title"><span class="dataSectNumerator"></span> out of <span class="dataSectDenominator"></span></span></p>
                 </div>
                 <div class="col-md-3">
                     <h2><span class="percentOnTime"></span>% On-time</h2>
@@ -183,7 +183,7 @@
                     <div class="col-md-4">
                         <p><span class="category-title dataTitle"></span>:<br>
                         <span class="category-title-alt">ROW permits issued within 3 weeks.</span> Permits issued on-time in the 30-day 
-period ending June 24: <span class="category-title"><span class="dataSectNumerator"></span> out of  <span class="dataSectDenominator"></span></span></p>
+period ending <span class="date"></span>: <span class="category-title"><span class="dataSectNumerator"></span> out of  <span class="dataSectDenominator"></span></span></p>
                     </div>
                     <div class="col-md-3">
                         <h2><span class="percentOnTime"></span>% On-time</h2>
@@ -204,7 +204,7 @@ period ending June 24: <span class="category-title"><span class="dataSectNumerat
                     <div class="col-md-4">
                         <p><span class="category-title dataTitle"></span>:<br>
                         <span class="category-title-alt">ROW permits issued within 3 weeks.</span>Permits issued on-time in the 30-day 
-period ending June 24: <span class="category-title"><span class="dataSectNumerator"></span> out of  <span class="dataSectDenominator"></span></span></p>
+period ending <span class="date"></span>: <span class="category-title"><span class="dataSectNumerator"></span> out of  <span class="dataSectDenominator"></span></span></p>
                     </div>
                     <div class="col-md-3">
                         <h2><span class="percentOnTime"></span>% On-time</h2>
@@ -297,8 +297,8 @@ period ending June 24: <span class="category-title"><span class="dataSectNumerat
 				</div>
 									   <div class="col-md-4">
 			<p>
-				<span class="category-title dataTitle">Total responses in the 30 day ending July 1</span>:<br>
-				<span class="category-title-alt"></span> 2018:  
+				<span class="category-title dataTitle"></span><br>
+				<span class="category-title-alt">Total responses in the 30 day ending <span class="date"></span></span>:<br> 2018:  
 				  <span class="category-title"><span class="dataSectNumerator"></span></span>
 				  <br>
 				2019: 
@@ -331,6 +331,8 @@ period ending June 24: <span class="category-title"><span class="dataSectNumerat
 			await generateKeyResult('obj2kr1', "keyResult1", 2,2,  combinationData, keyResultBanner, combinedPercentData);
 			await generateKeyResult('obj2kr2', "keyResult2", 1,1,  combinationData, keyResultBanner, combinedPercentData);
 			await generateKeyResult('obj2kr3', "keyResult3", 2,1,  combinationData, keyResultBanner, combinedPercentData);
+			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult1");
+			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult3");
 
 		};
 		dataRun();

@@ -153,9 +153,13 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<p>Survey responses with a score of 7 or higher in the 30-day period ending <span class="Date"></span>: 
+				<p>
             
-                        <span class="category-title"><span class="dataSectNumerator"></span> out of <span class="dataSectDenominator"></span></span></p>
+					<span class="category-title dataTitle"></span><br>
+					<span class="category-title-alt">Survey responses with a score of 7 or higher in the 30-day period ending <span class="date"></span></span>:<br>  
+					  <span class="category-title"><span class="dataSectNumerator"></span></span>
+					 out of 
+					  <span class="category-title"><span class="dataSectDenominator"></span></span></span></p>
 			</div>
 			<div class="col-md-3">
 				<h2><span class="percentOnTime"></span>% Compliance</h2>
@@ -184,10 +188,13 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<p><span class="category-title ">Cityline calls in the 60 day<br>
-				ending <span class="Date"></span></span>:<br>
-				2018: <span class="category-title"><span class="dataSectNumerator"></span></span><br>
-				2019: <span class="category-title"><span class="dataSectDenominator"></span></span></p>
+					<p>
+							<span class="category-title dataTitle"></span><br>
+							<span class="category-title-alt">Total responses in the 30 day ending <span class="date"></span></span>:<br> 2018:  
+							  <span class="category-title"><span class="dataSectNumerator"></span></span>
+							  <br>
+							2019: 
+							  <span class="category-title"><span class="dataSectDenominator"></span></span></span></p>
 			</div>
 			<div class="col-md-3">
 				<h2><span class="percentOnTime"></span>% Change</h2>
@@ -212,6 +219,8 @@
 			await generateKeyResult('obj3kr1', "keyResult1", 1,1,  combinationData, keyResultBanner, combinedPercentData);
 			await generateKeyResult('obj3kr2', "keyResult2", 2,1,  combinationData, keyResultBanner, combinedPercentData);
 			await generateKeyResult('obj3kr3', "keyResult3", 2,1,  combinationData, keyResultBanner, combinedPercentData);
+			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult2");
+			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult3");
 
 		};
 		dataRun();

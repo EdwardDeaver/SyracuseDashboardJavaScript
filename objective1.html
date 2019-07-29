@@ -601,7 +601,7 @@
 					<span class="category-title dataTitle"></span>:<br>
 					<span class="category-title-alt"></span> Total FY19 CIP project dollars:<span class="category-title"><span class="project_dollars"></span></span>
               		<br>
-					  FY19 total authorized dollars:  
+					  FY19 total authorized dollars:
 					  <span class="category-title"><span class="authorized_dollars"></span></span></span>
 						<br>
 						FY19 authorized dollars spent: 
@@ -874,7 +874,7 @@
 				var keyResult2Data = await getData('data/FiscalObjective2.csv').then(async function(data){return data;});
 				//console.log("Fiscal objectiv 2", keyResult2Data);
 				await generateKeyResult('obj1kr2', "keyResult2", 3, 1,  combinationData, keyResultBanner, keyResult2Data);
-				await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/FiscalObjective2.csv&page=1&per_page=1","keyResult2");
+				await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult2");
 			};
 			dataRun();
 

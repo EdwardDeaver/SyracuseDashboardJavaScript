@@ -238,6 +238,7 @@
        		var dataDescription = [];
 			   var timeDescription = [];
 			   var movement = [];
+			   var color = [];
        		//data = filteredDataObject = d3.group(data, d => d.category_or_dept);
 			console.log('Getting the array values', data);
        			for (i = 0; i < data.length; i++)
@@ -257,11 +258,13 @@
        				dataDescription.push(data[i].dataDescription);
 					   timeDescription.push(data[i].timeDescription);
 					   movement.push(data[i].movement);
+					   color.push(data[i].color);
+
 
 
        			};
 
-       		return [cardDescription, on_time, out_of_total, dataDescription, timeDescription,movement];
+       		return [cardDescription, on_time, out_of_total, dataDescription, timeDescription,movement,color];
 
 
 		   }
@@ -511,19 +514,25 @@
 			}
 			if(mode==2){
 				[].slice.call(domElement).forEach((div, index) =>{
-					   console.log("DIV COLOR INDICATORS", div);
+					   console.log("DIV COLOR INDICATORS", div.getElementsByClassName("progesssMessage"));
 					if (div !== undefined){
-						if (percentageCalculation[index] ==1)
+						divProgresssMessage = div.getElementsByClassName("progesssMessage");
+
+						if (percentageCalculation[index] ==2)
 						{
 							div.className = "card-header bg-success";
+							divProgresssMessage[0].innerHTML = "Success";
+							console.log("DIV PROGRESS ", divProgresssMessage);
 						}
-						if (percentageCalculation[index] == 0)
+						if (percentageCalculation[index] == 1)
 						{
+							divProgresssMessage = div.getElementsByClassName("On Our Way");
 							div.className = "card-header  bg-warning";
 						}
-						if (percentageCalculation[index] ==-1)
+						if (percentageCalculation[index] ==0)
 						{
 							div.className = "card-header bg-danger";
+							divProgresssMessage = div.getElementsByClassName("Problem Solving");
 
 						}
 					}
@@ -595,25 +604,36 @@ setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("d
 setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
 setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataDescription"), "number");
 setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("timeDescription"), "number");
-setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("card-header"), "color", 2);
+setIndicators(ArrayOfValues[6], DataContainerElemenets.getElementsByClassName("card-header"), "color", 2);
 setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("indicator"), "color", 3);
 
 
 	   }
-	   
-	   async function dateData(url){
-		var dateData =   await getData(url).then(async function(data) {return data;});
-		dateData = JSON.parse(dateData);
-		date = new Date(dateData[0].commit.author.date );
-		months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
-		return ""+months[date.getMonth()]+" "+date.getDate();
+
+async function setDateData(url,TargetName){
+	//var dateData =  dateData(url).then(function(data) {
+	//	console.log("inside function data", data)
+	//	return data;
+	//});
+	var dateData =    await getData(url).then(async function(data) {return data;});
+	console.log(dateData);
+	dateData = JSON.parse(dateData);
+	date = new Date(dateData[0].commit.author.date );
+	months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
+	dateYouWant =  ""+months[date.getMonth()]+" "+date.getDate();
+	var DataContainerElemenets = document.getElementsByName(TargetName)[0];
+	setIndicators(dateYouWant, DataContainerElemenets.getElementsByClassName("date"), "date");
+
 
 }
 
-async function setDateData(url,TargetName){
-	dateData =  await dateData(url);
-	var DataContainerElemenets = document.getElementsByName(TargetName)[0];
-	setIndicators(dateData, DataContainerElemenets.getElementsByClassName("date"), "date");
-
+	   
+ function dateData(url){
+	var dateData =    getData(url).then(async function(data) {return data;});
+	console.log(dateData);
+	dateData = JSON.parse(dateData);
+	date = new Date(dateData[0].commit.author.date );
+	months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
+	return ""+months[date.getMonth()]+" "+date.getDate();
 
 }

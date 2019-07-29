@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>City of Syracuse Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+
+    <!-- Highcharts scripts -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-66477210-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-66477210-5');
+</script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="position: fixed; top: 0;">
+      <a class="navbar-brand" href="http://syrgov.net">City of Syracuse  <i class="fas fa-chart-line"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="./index.html">Dashboard Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Objective1.html"><i class="fas fa-hand-holding-usd"></i> Fiscal Sustainability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Objective2.html"><i class="fas fa-home"></i> Neighborhood Stability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Objective3.html"><i class="fas fa-comments"></i> Constituent Engagement</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Objective4.html"><i class="fas fa-screwdriver"></i> City Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="https://innovatesyracuse.com/performance" target="_blank"><i class="far fa-thumbs-up" style="color:green;"></i> Successes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/document/d/1qdaRpO8-z8oSAAIFDNI5hJuXtHV9-hN-ICyuFRgoR-Y/edit?usp=sharing" target="_blank"></i>Key Terms</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" id="jumbotronbg">
+      <div class="container align-middle" id="center">
+        <span class="align-middle"><h1 style="color:white">City of Syracuse Performance Dashboard</h1>
+            <p style="color:white; text-align: left;">The City of Syracuse has a mission to consistently deliver high-quality experiences through proactive and efficient service. To do that, we must start by being transparent about our services and pursue data-driven results. Our performance dashboard communicates our city objectives and measures our progress toward those objectives from start to achievement. We are sharing specific and measureable goals that will be updated daily and reviewed weekly with leaders on our team.
+            </p>
+      </div>
+    </div>
+        <div class="container" id="center">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h2>Objective: Achieve Fiscal Sustainability</h2>
+<!--                    <a class="btn btn-primary" href="./Objective1.html" role="button">Drill Down</a> -->
+                    <p style="text-align: left;">The City is on a path toward achieving fiscal sustainability.  To show our city's growth, we'll have to show that we can manage spending and grow revenue. The City projected an $11 million budget deficit for the 2019 Fiscal Year (July 2018-June 2019). The key results for Achieving Fiscal Sustainability will both allow for and be a signal of a growing city.</p> </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-warning">On Our Way</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Reduce the general fund budget variance from 11% to 5%</h6>
+                          <h1 class="card-text">12 of 18</h1>
+                          <p class="card-text">Departments Complying</p>
+                          <p><i class="fas fa-arrows-alt-h" style="font-size:48px;"></i> since last month</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-danger">Problem Solving</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Spend 95% of authorized capital project dollars by the end of the fiscal year</h6>
+                          <h1 class="card-text">2 of 8</h1>
+                          <p class="card-text">Departments Complying</p>
+                          <p><i class="fas fa-arrow-down" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-grey">COMING SOON!</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Improve the procurement process and institute results-based contracting</h6>
+                          <h1 class="card-text">Procurement</h1>
+                          <p class="card-text">Project Plan</p>
+              <!--            <p><i class="fas fa-arrows-alt-h<!--" style="font-size:48px;"></i> since last month</p> -->
+                        </div>
+                </div>
+            </div>
+<a class="btn btn-primary" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/Objective1.html" role="button">Drill Down</a>
+            </div>  
+<div>
+    <hr style="border: 1px solidblack;" />
+</div>             
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h2>Objective: Increase economic investment and neighborhood stability</h2>
+<!--                    <a class="btn btn-primary" href="./Objective1.html" role="button">Drill Down</a> -->
+                    <p style="text-align: left;">The City of Syracuse should be a place where it is easy to open a business and live in quality, safe housing. We are taking several measures to improve how we attract economic investments to our city and stabilize our neighborhoods.</p> <br>
+                </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-danger">Problem Solving</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Ninety-five percent of permits and zoning approvals will be issued on-time</h6>
+                          <h1 class="card-text">1 of 5</h1>
+                          <p class="card-text">Categories complying</p>
+                          <p><i class="fas fa-arrow-up" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-warning">On Our Way</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Increase compliance of code violations by the comply by date from 20% to 35%</h6>
+                          <h1 class="card-text">1 of 2</h1>
+                          <p class="card-text">Violation types complying</p>
+                          <p><i class="fas fa-arrows-alt-h" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-warning">On Our Way</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Improve stability in the quality of life pilot area by 20%</h6>
+                          <h1 class="card-text">-10%</h1>
+                          <p class="card-text">Current change</p>
+                          <p><i class="fas fa-arrow-down" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+<a class="btn btn-primary" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/Objective2.html" role="button">Drill Down</a>
+            </div>
+<div>
+    <hr style="border: 1px solidblack;" />
+</div>             
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h2>Objective: Provide quality constituent engagement and response</h2>
+<!--                    <a class="btn btn-primary" href="./Objective1.html" role="button">Drill Down</a> -->
+                    <p style="text-align: left;">The community is an important part of how we govern. To ensure the community can interact with city government easily, we are identifying and improving ways that the community voice should be heard early and frequently. City government will work to provide quality constituent engagement and response to improve our public engagement strategies.</p> <br>
+                </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-danger">Problem Solving</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Increase social media engagement by 20%</h6>
+                          <h1 class="card-text">0 of 3</h1>
+                          <p class="card-text">Categories achieving</p>
+                          <p><i class="fas fa-arrows-alt-h" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-danger">Problem Solving</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Achieve 90% survey satisfaction from constituents</h6>
+                          <h1 class="card-text">65%</h1>
+                          <p class="card-text">Survey satisfaction</p>
+                          <p><i class="fas fa-arrow-up" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-danger">Problem Solving</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Improve equity of Cityline <br> use by 20%</h6>
+                          <h1 class="card-text">3 of 10</h1>
+                          <p class="card-text">Tracts Complying</p>
+                          <p><i class="fas fa-arrow-up" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+<a class="btn btn-primary" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/Objective3.html" role="button">Drill Down</a>
+            </div>
+            
+<div>
+    <hr style="border: 1px solidblack;" />
+</div>             
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h2>Objective: Deliver city services effectively, efficiently, and equitably</h2>
+<!--                    <a class="btn btn-primary" href="./Objective1.html" role="button">Drill Down</a> -->
+                    <p style="text-align: left; padding-bottom: 10px;">The City delivers several services that require coordination, inter-departmental communication, and high-quality delivery. The City of Syracuse should reliably deliver services, like filling potholes, in a reasonable time period, and do the work completely, so that revisits for the same problem occur rarely.</p>
+                </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-warning">On Our Way</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Ninety-five percent of City services will be delivered by their established resolution time</h6>
+                          <h1 class="card-text">1 of 4</h1>
+                          <p class="card-text">Current services delivered on time</p>
+                          <p><i class="fas fa-arrows-alt-h" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-danger">Problem Solving</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Increase the number of times city employees address a reported problem in one visit by 25%.</h6>
+                          <h1 class="card-text">1 of 7</h1>
+                          <p class="card-text">Services addressed in one visit</p>
+                          <p><i class="fas fa-arrows-alt-h" style="font-size:48px;"></i> since last week</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-12 col-12 form-group">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-grey">COMING SOON!</div>
+                        <div class="card-body">
+                          <h6 class="card-title">Improve equity of City service delivery time by 20%</h6>
+                          <h2 class="card-text">Neighborhood
+                          <br>Equity</h2>
+              <!--            <p><i class="fas fa-arrows-alt-h<!--" style="font-size:48px;"></i> since last month</p> -->
+                        </div>
+                </div>
+            </div>
+      
+<a class="btn btn-primary" href="http://dashboards.syrgov.net/test/Phase_2_All_Pages/Objective4.html" role="button">Drill Down</a>
+            </div>            
+            
+        </div>
