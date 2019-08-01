@@ -287,19 +287,6 @@
        };
 
 
-       // Function: GetData from URL
-       // URL: String type
-       // Type: ASYNC
-       async function getData(url)
-       {
-       	const response = await fetch(url,
-       	{
-       		cache: "no-cache"
-       	});
-       	const data = await response.text();
-
-       	return data;
-       };
 // Function: Generates a Chart JS Chart
 // xAxisLabel - Array of lables
 // xAxis - Array of labels for the x axis
@@ -480,23 +467,6 @@
        };
 
 
-// Function: Loads data to pipe into function to generate all charts
-// filteredData: a multi D array that is only for the data subject you want
-// keyData: Array, is the Keys of the data set
-// domElement: DOM Object Array this is a array of canvas elements
-// TYPE: ASYNC
-       async function loadCharts(filteredData, keyData, domElement)
-       {
-       	// console.log("DOM ELEMENT OF CANVAS", domElement);
-       	// console.log("FitredData in Load charts", filteredData);
-       	keyData.forEach((element, index) =>
-       	{
-       		// console.log("filteredData Map Call", filteredData.get(keyData[index]));
-       		// console.log("Canavas element", domElement[index]);
-       		var dataArray = splitData(filteredData.get(keyData[index]), "");
-       		ChartJSGenrate(dataArray[0], dataArray[1], 'line', domElement[index].id, keyData[index], 'Percent fixed', keyData[index], false, false, false, false, false, false, false, false, false, 22);
-       	});
-       };
        // Function: changes the color indicators based on the percent calculation
        // percentageCalculation: Array, numbers of the percent
        // domElementL is a Array of span tags in the elebt
@@ -659,16 +629,6 @@ async function setDateData(url,TargetName){
 
 }
 
-	   
- function dateData(url){
-	var dateData =    getData(url).then(async function(data) {return data;});
-	console.log(dateData);
-	dateData = JSON.parse(dateData);
-	date = new Date(dateData[0].commit.author.date );
-	months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
-	return ""+months[date.getMonth()]+" "+date.getDate();
-
-}
 //formats money
 function formatMoney(number) {
 	number = parseInt(number,10);
