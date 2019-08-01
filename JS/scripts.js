@@ -51,10 +51,10 @@
        			return data;
        		});
        		constructDataForMaps(Object2DataSet, DataContainerElemenets);
-       		setIndicators(ArrayOfValues2[0], DataContainerElemenets.getElementsByClassName("project_dollars"), "number");
-       		setIndicators(ArrayOfValues2[1], DataContainerElemenets.getElementsByClassName("authorized_dollars"), "number");
-       		setIndicators(ArrayOfValues2[2], DataContainerElemenets.getElementsByClassName("spent_dollars"), "number");
-       		setIndicators(ArrayOfValues2[3], DataContainerElemenets.getElementsByClassName("unspent_dollars"), "number");
+       		setIndicators(ArrayOfValues2[0], DataContainerElemenets.getElementsByClassName("project_dollars"), "money");
+       		setIndicators(ArrayOfValues2[1], DataContainerElemenets.getElementsByClassName("authorized_dollars"), "money");
+       		setIndicators(ArrayOfValues2[2], DataContainerElemenets.getElementsByClassName("spent_dollars"), "money");
+       		setIndicators(ArrayOfValues2[3], DataContainerElemenets.getElementsByClassName("unspent_dollars"), "money");
        		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
        		setIndicators(ArrayOfValues[4], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
 			   setIndicators(ArrayOfValues[5], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
@@ -93,7 +93,8 @@
        		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
 			   setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
 			   setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
-       	}
+		   }
+		   
 
        }
 // Function: constructDataForMaps
@@ -491,6 +492,17 @@
        	//console.log("DOM ELEMENT OF SPAN", domElement);
        	//console.log("FitredData in Load charts", percentageCalculation);
 
+		if (typeToSet == "money")
+		{
+			[].slice.call(percentageCalculation).forEach((element, index) =>
+			{
+				if (domElement[index] !== undefined)
+				{
+				 console.log(element);
+					domElement[index].innerHTML = formatMoney(element);
+				}
+			});
+		};	
        	if (typeToSet == "color"){
 			if(mode==1){
 				[].slice.call(domElement).forEach((div, index) =>{
@@ -637,3 +649,8 @@ async function setDateData(url,TargetName){
 	return ""+months[date.getMonth()]+" "+date.getDate();
 
 }
+//formats money
+function formatMoney(number) {
+	number = parseInt(number,10);
+	return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  }
