@@ -9,7 +9,7 @@
 // combinationData(Data Object): Data object for the full data CSV
 // keyResultBanner(Data Object): Data object for the key result titles data CSV
 // combinedPercentData(Data Object): Data object for the left side numbers and the middle number data CSV
-       async function generateKeyResult(key, TargetName, mode, keyMode, combinationData, keyResultBanner, combinedPercentData)
+       async function generateKeyResult(key, TargetName, mode, keyMode, combinationData, keyResultBanner, combinedPercentData,money)
        {
        //	console.log("data from generateobjectiv1", combinationData);
        	combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
@@ -80,8 +80,15 @@
        	if (mode == 1)
        	{
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
-       		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
-			   setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
+			   setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
+			   if(money==1){
+				setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "money");
+
+			   }
+			   else{
+				setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
+
+			   }
 			   setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
 
        	}
@@ -89,9 +96,15 @@
        	{
 			   console.log(ArrayOfValues, DataContainerElemenets.getElementsByClassName("dataSectNumerator"));
        		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("percentOnTime"), "number");
-       		setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
-       		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
-			   setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
+			   setIndicators(ArrayOfValues[0], DataContainerElemenets.getElementsByClassName("dot"), "color", 1);
+			if(money==1){
+       		setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "money");
+			   setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "money");
+			}
+			else{
+				setIndicators(ArrayOfValues[1], DataContainerElemenets.getElementsByClassName("dataSectDenominator"), "number");
+				setIndicators(ArrayOfValues[2], DataContainerElemenets.getElementsByClassName("dataSectNumerator"), "number");
+			}
 			   setIndicators(ArrayOfValues[3], DataContainerElemenets.getElementsByClassName("dataTitle"), "number");
 		   }
 		   
@@ -574,6 +587,7 @@
        	};
        	if (typeToSet == "number")
        	{
+
        		[].slice.call(percentageCalculation).forEach((element, index) =>
        		{
        			if (domElement[index] !== undefined)
@@ -583,6 +597,8 @@
        			}
        		});
 		   };
+		
+
 		   if (typeToSet == "date")
        	{
        		for(i =0; i<domElement.length;i++){
@@ -607,6 +623,8 @@
 		   console.log("MOVEMENT", ArrayOfValues[5]);
 
 		   ArrayOfValues[5] = ArrayOfValues[5].map(Number);
+		   ArrayOfValues[6] = ArrayOfValues[6].map(Number);
+
 		   console.log("MOVEMENT", ArrayOfValues[5]);
 console.log("Array of values in generate", ArrayOfValues);
 console.log(DataContainerElemenets);

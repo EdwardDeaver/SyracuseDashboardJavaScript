@@ -328,9 +328,9 @@ period ending <span class="date"></span>: <span class="category-title"><span cla
 			var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
 			var keyResultBanner =  await getData('data/keyResultBannerData.csv').then(async function(data) {return data;});
 			var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
-			await generateKeyResult('obj2kr1', "keyResult1", 2,2,  combinationData, keyResultBanner, combinedPercentData);
-			await generateKeyResult('obj2kr2', "keyResult2", 1,1,  combinationData, keyResultBanner, combinedPercentData);
-			await generateKeyResult('obj2kr3', "keyResult3", 2,1,  combinationData, keyResultBanner, combinedPercentData);
+			await generateKeyResult('obj2kr1', "keyResult1", 2,2,  combinationData, keyResultBanner, combinedPercentData,0);
+			await generateKeyResult('obj2kr2', "keyResult2", 1,1,  combinationData, keyResultBanner, combinedPercentData,0);
+			await generateKeyResult('obj2kr3', "keyResult3", 2,1,  combinationData, keyResultBanner, combinedPercentData,0);
 			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult1");
 			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult3");
 
