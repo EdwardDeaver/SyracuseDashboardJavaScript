@@ -6,7 +6,7 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"> 
 	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>Objective: Increase economic investment and neighborhood stability</title><!-- Custom CSS-->
-	<link href="css/style.css" rel="stylesheet"><!-- Bootstrap -->
+	<link href="css/style.min.css" rel="stylesheet"><!-- Bootstrap -->
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- font awesome-->
@@ -37,7 +37,7 @@
 	<script src="https://d3js.org/d3-array.v2.min.js">
 	</script> <!-- CUSTOM SCRIPTS-->
 	 
-	<script src="js/scripts.js">
+	<script src="js/scripts.min.js">
 	</script> <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="index.html">City of Syracuse <i class="fas fa-chart-line"></i></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
@@ -872,18 +872,16 @@
             	var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
 				await generateKeyResult('obj1kr1', "keyResult1", 2, 1,  combinationData, keyResultBanner, combinedPercentData,0);
 				var keyResult2Data = await getData('data/FiscalObjective2.csv').then(async function(data){return data;});
-				//console.log("Fiscal objectiv 2", keyResult2Data);
 				await generateKeyResult('obj1kr2', "keyResult2", 3, 1,  combinationData, keyResultBanner, keyResult2Data,1);
 				await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult2");
 			};
 			dataRun();
 
-		//generateKeyResult('obj1kr2', "keyResult2", 1);
 
 
 	</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
-		<script src="js/scrolling.js"></script>
+		<script src="js/scrolling.min.js"></script>
 
 </body>
 </html>

@@ -11,43 +11,29 @@
 // combinedPercentData(Data Object): Data object for the left side numbers and the middle number data CSV
        async function generateKeyResult(key, TargetName, mode, keyMode, combinationData, keyResultBanner, combinedPercentData,money)
        {
-       //	console.log("data from generateobjectiv1", combinationData);
        	combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
        	var Object2DataSet = combinationDataCSVGroup.get(key).get(undefined);
-       	//console.log("the comimbination data csv", Object2DataSet);
 		   var DataContainerElements = document.getElementsByName(TargetName)[0];
-		   console.log("DATA CONTAINER ELEMNT TYPE");
-		   console.log( typeof DataContainerElements);
-       	//console.log("Data container", DataContainerElements)
 
        	combinedPercentDataCSV = d3.group(await d3.csvParse(combinedPercentData), d => d.OKR, d => d.Name);
        	combinedCSV = combinedPercentDataCSV.get(key).get(undefined);
 
-       	//console.log("Combined Percent Data", combinedCSV);
        	ArrayOfValues = await getCategoryDeptValues(combinedCSV, mode).then(async function (data)
        	{
        		return data;
        	});
-       	//console.log("Array of Values", ArrayOfValues);
-       	//console.log("document",DataContainerElements.getElementsByClassName("percentOnTime"));
-
-
-       	//console.log("key Rsult Banner CSV",  keyResultBannerCSV2);
        	keyResultBannerCSV = d3.group(await d3.csvParse(keyResultBanner), d => d.OKR, d => d.Name);
 
        	var keyResultBannerCSV = keyResultBannerCSV.get(key).get(undefined);
-       	//console.log("CSV GET KEY", keyResultBannerCSV[0]);
+
        	ArrayofKeyResults = await getCategoryDeptValues(keyResultBannerCSV, keyMode).then(async function (data)
        	{
        		return data;
            });
-           //console.log("KEY RESULTS DATA", ArrayofKeyResults);
-       	//console.log("Data Containers",  DataContainerElements.getElementsByClassName("dataSectpercentData"));
-       	//console.log("Array of Resukts", ArrayofKeyResults);
+
        	if (mode == 3)
        	{
-       		//            console.log("OBJECTIVE 1 KR 2");
-       		//          console.log("Objective 1 kr 2", ArrayofKeyResults);
+
        		ArrayOfValues2 = await getCategoryDeptValues(combinedCSV, mode).then(async function (data)
        		{
        			return data;
@@ -96,7 +82,6 @@
        	}
        	if (mode == 2)
        	{
-			   console.log(ArrayOfValues, DataContainerElements.getElementsByClassName("dataSectNumerator"));
        		setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("percentOnTime"), "number");
 			   setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("dot"), "color", 1);
 			if(money==1){
@@ -120,25 +105,17 @@
        async function constructDataForMaps(KeyResultDataSet, DataContainer)
        {
        	DataContainer = DataContainer.getElementsByTagName("CANVAS");
-       	//console.log(DataContainer);
-       	// console.log("KeyResultDataSet", KeyResultDataSet);
+
        	filteredDataObject = d3.group(KeyResultDataSet, d => d.category_or_dept);
-       	// console.log('FILteD DATA IN BEFORE LOOP', filteredDataObject);
        	var start = 0;
        	filteredDataObject.forEach((DataFromObject, index) =>
        	{
        		var ArrayOfValues = splitData(DataFromObject, "permits");
-       		// filteredDataObject = d3.group(DataFromObject, d => d.category_or_dept);
-       		//console.log(DataFromObject);
-       		//console.log(ArrayOfValues);
-       		//console.log(index);
-       		//console.log("DataContainer ID", DataContainer[start].id);
-       		//console.log(index.includes("_"));
+
        		if (index.includes("_"))
        		{
-       		//	console.log(index);
        			index = index.substr(0, index.lastIndexOf("_"));
-       		//	console.log(index);
+
 
        		}
        		try
@@ -148,7 +125,6 @@
        		}
        		catch (error)
        		{
-       		//	console.log(error.message);
        			start = start + 1;
        		}
 
@@ -170,18 +146,13 @@
        		{
 
        			var start = 0;
-       			//console.log("Data 1s", index, DataFromObject);
 
        			for (i = 0; i < DataFromObject.length; i++)
        			{
 
-
-       				//   console.log(element[0].category_or_dept);
-       				//console.log("Category", DataFromObject[i]);
        				if (DataFromObject[i].category_or_dept == "title")
        				{
-       					//     console.log("TITLE REACHED");
-       					//     console.log(DataFromObject, DataFromObject[i].value);
+
        					arrayOfValues.push(DataFromObject[i].value);
 
        					arrayOfDenominator.push(DataFromObject[i].out_of_total);
@@ -189,7 +160,6 @@
        				}
        				else
        				{
-       					//console.log(DataFromObject, DataFromObject[i].value);
        					arrayOfValues.push(DataFromObject[i].value);
 
        					arrayOfDenominator.push(DataFromObject[i].out_of_total);
@@ -218,17 +188,10 @@
        		{
 
        			var start = 0;
-       			//console.log("Data 1s", index, DataFromObject);
 
        			for (i = 0; i < DataFromObject.length; i++)
        			{
 
-
-       				//   console.log(element[0].category_or_dept);
-       				//console.log("Category", DataFromObject[i]);
-
-       				//     console.log("TITLE REACHED");
-       				//console.log("DataFromObject", DataFromObject[i]);
        				project_dollars.push(DataFromObject[i].project_dollars);
 
        				authorized_dollars.push(DataFromObject[i].authorized_dollars);
@@ -255,18 +218,9 @@
 			   var timeDescription = [];
 			   var movement = [];
 			   var color = [];
-       		//data = filteredDataObject = d3.group(data, d => d.category_or_dept);
-			console.log('Getting the array values', data);
        			for (i = 0; i < data.length; i++)
        			{
-					console.log("Data from object", data[i]);
 
-
-       				//   console.log(element[0].category_or_dept);
-       				//console.log("Category", DataFromObject[i]);
-
-       				//     console.log("TITLE REACHED");
-       				//console.log("DataFromObject", DataFromObject[i]);
        				cardDescription.push(data[i].cardDescription);
 
        				on_time.push(data[i].on_time);
@@ -308,7 +262,6 @@
        async function ChartJSGenrate(xAxisLabel, xAxis, type, chartCanvasID, XscaleLabelName, YscaleLabelName, LegendLabel, displayLegend, displayXScale, displayYScale, displayXTicks, displayYTicks, displayBorderGridLinesXAxis, displayBorderGridLinesYAxis, displayGridLinesXAxis, displayGridLinesYAxis, numberOfValues)
        {
        	var numberOfValues = -Math.abs(numberOfValues);
-       	//  console.log(numberOfValues);
        	var ctx = document.getElementById(chartCanvasID).getContext('2d');
        	var chartOptions = {
        		maintainAspectRatio: false,
@@ -430,13 +383,11 @@
        	}
        	dataInArray2 = dataInArray.map(Number);
        	dateInArray = dateInArray.map(Number);
-       	//console.log(dateInArray);
        	if (dateInArray[dateInArray.length - 1] <= 12)
        	{
        		for (i = 0; i < dateInArray.length; i++)
        		{
        			dateInArray[i] = months[i];
-       			//console.log(dateInArray[i]);
        		}
        	}
        	else
@@ -445,10 +396,8 @@
        		{
        			d = new Date(dateInArray[i] * 1000);
        			dateInArray[i] = (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear();
-       			//console.log(dateInArray[i]);
        		}
        	}
-       //	console.log(dateInArray);
        	return [dateInArray, dataInArray2];
        };
 // Function: Gets the Text data of object from url
@@ -474,8 +423,7 @@
 
        async function setIndicators(percentageCalculation, domElement, typeToSet, mode)
        {
-       	//console.log("DOM ELEMENT OF SPAN", domElement);
-       	//console.log("FitredData in Load charts", percentageCalculation);
+
 
 		if (typeToSet == "money")
 		{
@@ -483,7 +431,6 @@
 			{
 				if (domElement[index] !== undefined)
 				{
-				 console.log(element);
 					domElement[index].innerHTML = formatMoney(element);
 				}
 			});
@@ -491,7 +438,6 @@
        	if (typeToSet == "color"){
 			if(mode==1){
 				[].slice.call(domElement).forEach((div, index) =>{
-					//   console.log("DIV COLOR INDICATORS", div);
 					if (div !== undefined){
 						if (percentageCalculation[index] >= 95)
 						{
@@ -511,7 +457,6 @@
 			}
 			if(mode==2){
 				[].slice.call(domElement).forEach((div, index) =>{
-					   console.log("DIV COLOR INDICATORS", div.getElementsByClassName("progesssMessage"));
 					if (div !== undefined){
 						divProgresssMessage = div.getElementsByClassName("progesssMessage");
 
@@ -519,7 +464,6 @@
 						{
 							div.className = "card-header bg-success";
 							divProgresssMessage[0].innerHTML = "Success";
-							console.log("DIV PROGRESS ", divProgresssMessage);
 						}
 						if (percentageCalculation[index] == 1)
 						{
@@ -538,7 +482,6 @@
 
 			if(mode==3){
 				[].slice.call(domElement).forEach((div, index) =>{
-					   console.log("DIV COLOR INDICATORS", div);
 					if (div !== undefined){
 						if (percentageCalculation[index] ==1)
 						{
@@ -564,7 +507,6 @@
        		{
        			if (domElement[index] !== undefined)
        			{
-       				// console.log(element);
        				domElement[index].innerHTML = element;
        			}
        		});
@@ -580,27 +522,19 @@
 
 	   }
 	   async function generateKeyBoxResult(key, TargetName, data)       {
-       //	console.log("data from generateobjectiv1", combinationData);
 	   dataCSV = d3.group(await d3.csvParse(data), d => d.obj, d => d.Name);
-	   console.log(dataCSV);
        	var dataCSVGrouped = dataCSV.get(key).get(undefined);
-       	console.log("the comimbination data csv", dataCSVGrouped);
        	var DataContainerElements = document.getElementsByName(TargetName)[0];
-       	console.log("Data container", DataContainerElements)
 
        	ArrayOfValues = await getCategoryDeptValues(dataCSVGrouped, 4).then(async function (data)
        	{
        		return data;
 		   });
-		   console.log("MOVEMENT", ArrayOfValues[5]);
 
 		   ArrayOfValues[5] = ArrayOfValues[5].map(Number);
 		   ArrayOfValues[6] = ArrayOfValues[6].map(Number);
 
-		   console.log("MOVEMENT", ArrayOfValues[5]);
-console.log("Array of values in generate", ArrayOfValues);
-console.log(DataContainerElements);
-console.log(DataContainerElements.getElementsByClassName("goalMessage"));
+
 setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("goalMessage"), "number");
 setIndicators(ArrayOfValues[1], DataContainerElements.getElementsByClassName("dataSectNumerator"), "number");
 setIndicators(ArrayOfValues[2], DataContainerElements.getElementsByClassName("dataSectDenominator"), "number");
@@ -613,12 +547,8 @@ setIndicators(ArrayOfValues[5], DataContainerElements.getElementsByClassName("in
 	   }
 
 async function setDateData(url,TargetName){
-	//var dateData =  dateData(url).then(function(data) {
-	//	console.log("inside function data", data)
-	//	return data;
-	//});
+
 	var dateData =    await getData(url).then(async function(data) {return data;});
-	console.log(dateData);
 	dateData = JSON.parse(dateData);
 	date = new Date(dateData[0].commit.author.date );
 	months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
