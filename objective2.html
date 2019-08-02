@@ -333,7 +333,9 @@ period ending <span class="date"></span>: <span class="category-title"><span cla
 			await generateKeyResult('obj2kr3', "keyResult3", 2,1,  combinationData, keyResultBanner, combinedPercentData,0);
 			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult1");
 			await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult3");
-
+			combinationData = 0;
+				keyResultBanner = 0;
+				combinedPercentData = 0;
 		};
 		dataRun();
 

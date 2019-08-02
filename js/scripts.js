@@ -11,22 +11,22 @@
 // combinedPercentData(Data Object): Data object for the left side numbers and the middle number data CSV
        async function generateKeyResult(key, TargetName, mode, keyMode, combinationData, keyResultBanner, combinedPercentData,money)
        {
-       	combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
+       	var combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
        	var Object2DataSet = combinationDataCSVGroup.get(key).get(undefined);
 		   var DataContainerElements = document.getElementsByName(TargetName)[0];
 
-       	combinedPercentDataCSV = d3.group(await d3.csvParse(combinedPercentData), d => d.OKR, d => d.Name);
-       	combinedCSV = combinedPercentDataCSV.get(key).get(undefined);
+       	var combinedPercentDataCSV = d3.group(await d3.csvParse(combinedPercentData), d => d.OKR, d => d.Name);
+       	var combinedCSV = combinedPercentDataCSV.get(key).get(undefined);
 
-       	ArrayOfValues = await getCategoryDeptValues(combinedCSV, mode).then(async function (data)
+       var 	ArrayOfValues = await getCategoryDeptValues(combinedCSV, mode).then(async function (data)
        	{
        		return data;
        	});
-       	keyResultBannerCSV = d3.group(await d3.csvParse(keyResultBanner), d => d.OKR, d => d.Name);
+       	var keyResultBannerCSV = d3.group(await d3.csvParse(keyResultBanner), d => d.OKR, d => d.Name);
 
        	var keyResultBannerCSV = keyResultBannerCSV.get(key).get(undefined);
 
-       	ArrayofKeyResults = await getCategoryDeptValues(keyResultBannerCSV, keyMode).then(async function (data)
+       var 	ArrayofKeyResults = await getCategoryDeptValues(keyResultBannerCSV, keyMode).then(async function (data)
        	{
        		return data;
            });
@@ -34,7 +34,7 @@
        	if (mode == 3)
        	{
 
-       		ArrayOfValues2 = await getCategoryDeptValues(combinedCSV, mode).then(async function (data)
+       		var ArrayOfValues2 = await getCategoryDeptValues(combinedCSV, mode).then(async function (data)
        		{
        			return data;
        		});
@@ -104,17 +104,17 @@
 // DataContainer(String): DOM element of the container you want to target.
        async function constructDataForMaps(KeyResultDataSet, DataContainer)
        {
-       	DataContainer = DataContainer.getElementsByTagName("CANVAS");
+       	var DataContainer = DataContainer.getElementsByTagName("CANVAS");
 
-       	filteredDataObject = d3.group(KeyResultDataSet, d => d.category_or_dept);
+       var 	filteredDataObject = d3.group(KeyResultDataSet, d => d.category_or_dept);
        	var start = 0;
-       	filteredDataObject.forEach((DataFromObject, index) =>
+       	 filteredDataObject.forEach((DataFromObject, index) =>
        	{
        		var ArrayOfValues = splitData(DataFromObject, "permits");
 
        		if (index.includes("_"))
        		{
-       			index = index.substr(0, index.lastIndexOf("_"));
+       			var index = index.substr(0, index.lastIndexOf("_"));
 
 
        		}

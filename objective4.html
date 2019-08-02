@@ -456,7 +456,9 @@
             var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
             await generateKeyResult('obj4kr1', "keyResult1", 1,1,  combinationData, keyResultBanner, combinedPercentData,0);
             await generateKeyResult('obj4kr2', "keyResult2", 2,1,  combinationData, keyResultBanner, combinedPercentData,0);
-
+            combinationData = 0;
+				keyResultBanner = 0;
+				combinedPercentData = 0;
         };
         dataRun();
 

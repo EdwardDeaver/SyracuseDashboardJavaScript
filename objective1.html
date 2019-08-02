@@ -874,6 +874,9 @@
 				var keyResult2Data = await getData('data/FiscalObjective2.csv').then(async function(data){return data;});
 				await generateKeyResult('obj1kr2', "keyResult2", 3, 1,  combinationData, keyResultBanner, keyResult2Data,1);
 				await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult2");
+				var combinationData = 0;
+				var	keyResultBanner = 0;
+				var combinedPercentData = 0;
 			};
 			dataRun();
 
