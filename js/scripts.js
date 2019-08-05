@@ -9,7 +9,8 @@
 // combinationData(Data Object): Data object for the full data CSV
 // keyResultBanner(Data Object): Data object for the key result titles data CSV
 // combinedPercentData(Data Object): Data object for the left side numbers and the middle number data CSV
-       async function generateKeyResult(key, TargetName, mode, keyMode, combinationData, keyResultBanner, combinedPercentData,money)
+// indicatorRange (array): High break, mid break, low break for the circle indicators
+       async function generateKeyResult(key, TargetName, mode, keyMode, combinationData, keyResultBanner, combinedPercentData,money,indicatorRange)
        {
        	var combinationDataCSVGroup = d3.group(await d3.csvParse(combinationData), d => d.OKR, d => d.Name);
        	var Object2DataSet = combinationDataCSVGroup.get(key).get(undefined);
@@ -44,7 +45,7 @@
        		setIndicators(ArrayOfValues2[2], DataContainerElements.getElementsByClassName("spent_dollars"), "money");
        		setIndicators(ArrayOfValues2[3], DataContainerElements.getElementsByClassName("unspent_dollars"), "money");
        		setIndicators(ArrayOfValues[4], DataContainerElements.getElementsByClassName("percentOnTime"), "number");
-       		setIndicators(ArrayOfValues[4], DataContainerElements.getElementsByClassName("dot"), "color", 1);
+       		setIndicators(ArrayOfValues[4], DataContainerElements.getElementsByClassName("dot"), "color", 1, indicatorRange);
 			   setIndicators(ArrayOfValues[5], DataContainerElements.getElementsByClassName("dataTitle"), "number");
 
        	}
@@ -68,7 +69,7 @@
        	if (mode == 1)
        	{
        		setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("percentOnTime"), "number");
-			   setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("dot"), "color", 1);
+			   setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("dot"), "color", 1, indicatorRange);
 			   if(money==1){
 				setIndicators(ArrayOfValues[1], DataContainerElements.getElementsByClassName("dataSectDenominator"), "money");
 
@@ -83,7 +84,7 @@
        	if (mode == 2)
        	{
        		setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("percentOnTime"), "number");
-			   setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("dot"), "color", 1);
+			   setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("dot"), "color", 1, indicatorRange);
 			if(money==1){
        		setIndicators(ArrayOfValues[1], DataContainerElements.getElementsByClassName("dataSectDenominator"), "money");
 			   setIndicators(ArrayOfValues[2], DataContainerElements.getElementsByClassName("dataSectNumerator"), "money");
@@ -421,7 +422,7 @@
        // domElementL is a Array of span tags in the elebt
        // TYPE: ASYNC
 
-       async function setIndicators(percentageCalculation, domElement, typeToSet, mode)
+       async function setIndicators(percentageCalculation, domElement, typeToSet, mode, indicatorRange)
        {
 
 
@@ -439,16 +440,22 @@
 			if(mode==1){
 				[].slice.call(domElement).forEach((div, index) =>{
 					if (div !== undefined){
-						if (percentageCalculation[index] >= 95)
+						console.log( percentageCalculation[index]);
+						if (percentageCalculation[index] >= indicatorRange[1])
 						{
+							console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[1])
 							div.className = "dot greendot";
 						}
-						if (percentageCalculation[index] < 95 && percentageCalculation[index] >= 74)
+						if (percentageCalculation[index] < indicatorRange[1] && percentageCalculation[index] >= indicatorRange[0])
 						{
+							console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[1], indicatorRange[0])
+
 							div.className = "dot yellowdot";
 						}
-						if (percentageCalculation[index] < 74)
+						if (percentageCalculation[index] < indicatorRange[0])
 						{
+							console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[0])
+
 							div.className = "dot reddot";
 
 						}
