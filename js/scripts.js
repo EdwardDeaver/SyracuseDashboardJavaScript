@@ -444,157 +444,181 @@ async function getData(url)
 };
 
 
-       // Function: changes the color indicators based on the percent calculation
-       // percentageCalculation: Array, numbers of the percent
-       // domElementL is a Array of span tags in the elebt
-       // TYPE: ASYNC
+// Function: changes the color indicators based on the percent calculation
+// percentageCalculation: Array, numbers of the percent
+// domElementL is a Array of span tags in the elebt
+// TYPE: ASYNC
 
-       async function setIndicators(percentageCalculation, domElement, typeToSet, mode, indicatorRange)
-       {
-
-
-		if (typeToSet == "money")
-		{
-			[].slice.call(percentageCalculation).forEach((element, index) =>
+async function setIndicators(percentageCalculation, domElement, typeToSet, mode, indicatorRange){
+	if (percentageCalculation == null || domElement == null || typeToSet == null){
+		console.log("percentageCalculation, domElement, or typeToSet are null. (setIndicators)");
+	}
+	else{
+		try {
+			if (typeToSet == "money")
 			{
-				if (domElement[index] !== undefined)
+				[].slice.call(percentageCalculation).forEach((element, index) =>
 				{
-					domElement[index].innerHTML = formatMoney(element);
+					if (domElement[index] !== undefined)
+					{
+						domElement[index].innerHTML = formatMoney(element);
+					}
+				});
+			};	
+			if (typeToSet == "color"){
+				if(mode==1){
+					[].slice.call(domElement).forEach((div, index) =>{
+						if (div !== undefined){
+							console.log( percentageCalculation[index]);
+							if (percentageCalculation[index] >= indicatorRange[1])
+							{
+								console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[1])
+								div.className = "dot greendot";
+							}
+							if (percentageCalculation[index] < indicatorRange[1] && percentageCalculation[index] >= indicatorRange[0])
+							{
+								console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[1], indicatorRange[0])
+
+								div.className = "dot yellowdot";
+							}
+							if (percentageCalculation[index] < indicatorRange[0])
+							{
+								console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[0])
+
+								div.className = "dot reddot";
+
+							}
+						}
+					});
 				}
-			});
-		};	
-       	if (typeToSet == "color"){
-			if(mode==1){
-				[].slice.call(domElement).forEach((div, index) =>{
-					if (div !== undefined){
-						console.log( percentageCalculation[index]);
-						if (percentageCalculation[index] >= indicatorRange[1])
-						{
-							console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[1])
-							div.className = "dot greendot";
-						}
-						if (percentageCalculation[index] < indicatorRange[1] && percentageCalculation[index] >= indicatorRange[0])
-						{
-							console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[1], indicatorRange[0])
+				if(mode==2){
+					[].slice.call(domElement).forEach((div, index) =>{
+						if (div !== undefined){
+							divProgresssMessage = div.getElementsByClassName("progesssMessage");
 
-							div.className = "dot yellowdot";
-						}
-						if (percentageCalculation[index] < indicatorRange[0])
-						{
-							console.log("DOT DATA CALC", percentageCalculation[index], indicatorRange[0])
+							if (percentageCalculation[index] ==2)
+							{
+								div.className = "card-header bg-success";
+								divProgresssMessage[0].innerHTML = "Success";
+							}
+							if (percentageCalculation[index] == 1)
+							{
+								divProgresssMessage = div.getElementsByClassName("On Our Way");
+								div.className = "card-header  bg-warning";
+							}
+							if (percentageCalculation[index] ==0)
+							{
+								div.className = "card-header bg-danger";
+								divProgresssMessage = div.getElementsByClassName("Problem Solving");
 
-							div.className = "dot reddot";
-
+							}
 						}
+					});
+				}
+
+				if(mode==3){
+					[].slice.call(domElement).forEach((div, index) =>{
+						if (div !== undefined){
+							if (percentageCalculation[index] ==1)
+							{
+								div.className = "indicator fas  fa-arrow-up";
+							}
+							if (percentageCalculation[index] == 0)
+							{
+								div.className = "indicator fas  fa-arrows-alt-h";
+							}
+							if (percentageCalculation[index] ==-1)
+							{
+								div.className = "indicator fas fa-arrow-down";
+
+							}
+						}
+					});
+				}
+			};
+			if (typeToSet == "number")
+			{
+
+				[].slice.call(percentageCalculation).forEach((element, index) =>
+				{
+					if (domElement[index] !== undefined)
+					{
+						domElement[index].innerHTML = element;
 					}
 				});
-			}
-			if(mode==2){
-				[].slice.call(domElement).forEach((div, index) =>{
-					if (div !== undefined){
-						divProgresssMessage = div.getElementsByClassName("progesssMessage");
-
-						if (percentageCalculation[index] ==2)
-						{
-							div.className = "card-header bg-success";
-							divProgresssMessage[0].innerHTML = "Success";
-						}
-						if (percentageCalculation[index] == 1)
-						{
-							divProgresssMessage = div.getElementsByClassName("On Our Way");
-							div.className = "card-header  bg-warning";
-						}
-						if (percentageCalculation[index] ==0)
-						{
-							div.className = "card-header bg-danger";
-							divProgresssMessage = div.getElementsByClassName("Problem Solving");
-
-						}
-					}
-				});
-			}
-
-			if(mode==3){
-				[].slice.call(domElement).forEach((div, index) =>{
-					if (div !== undefined){
-						if (percentageCalculation[index] ==1)
-						{
-							div.className = "indicator fas  fa-arrow-up";
-						}
-						if (percentageCalculation[index] == 0)
-						{
-							div.className = "indicator fas  fa-arrows-alt-h";
-						}
-						if (percentageCalculation[index] ==-1)
-						{
-							div.className = "indicator fas fa-arrow-down";
-
-						}
-					}
-				});
-			}
-       	};
-       	if (typeToSet == "number")
-       	{
-
-       		[].slice.call(percentageCalculation).forEach((element, index) =>
-       		{
-       			if (domElement[index] !== undefined)
-       			{
-       				domElement[index].innerHTML = element;
-       			}
-       		});
-		   };
-		
-
+			};
 		   if (typeToSet == "date")
        	{
        		for(i =0; i<domElement.length;i++){
 				   domElement[i].innerHTML = percentageCalculation;
 			   }
-       	};
+       	};	
+		} catch (error) {
+			console.log(error);
+		}
 
-	   }
-	   async function generateKeyBoxResult(key, TargetName, data)       {
-	   dataCSV = d3.group(await d3.csvParse(data), d => d.obj, d => d.Name);
-       	var dataCSVGrouped = dataCSV.get(key).get(undefined);
-       	var DataContainerElements = document.getElementsByName(TargetName)[0];
+		
+	}
+}
 
-       	ArrayOfValues = await getCategoryDeptValues(dataCSVGrouped, 4).then(async function (data)
-       	{
-       		return data;
-		   });
+async function generateKeyBoxResult(key, TargetName, data)
+{
+	if(key == null || TargetName == null ||  data == null){
+		console.log("(key, TargetName, or data are null. (generateKeyBoxResult)");
 
-		   ArrayOfValues[5] = ArrayOfValues[5].map(Number);
-		   ArrayOfValues[6] = ArrayOfValues[6].map(Number);
-
-
-setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("goalMessage"), "number");
-setIndicators(ArrayOfValues[1], DataContainerElements.getElementsByClassName("dataSectNumerator"), "number");
-setIndicators(ArrayOfValues[2], DataContainerElements.getElementsByClassName("dataSectDenominator"), "number");
-setIndicators(ArrayOfValues[3], DataContainerElements.getElementsByClassName("dataDescription"), "number");
-setIndicators(ArrayOfValues[4], DataContainerElements.getElementsByClassName("timeDescription"), "number");
-setIndicators(ArrayOfValues[6], DataContainerElements.getElementsByClassName("card-header"), "color", 2);
-setIndicators(ArrayOfValues[5], DataContainerElements.getElementsByClassName("indicator"), "color", 3);
-
-
-	   }
+	}
+	else {
+		try {
+			var dataCSV = d3.group(await d3.csvParse(data), d => d.obj, d => d.Name);
+			var dataCSVGrouped = dataCSV.get(key).get(undefined);
+			var DataContainerElements = document.getElementsByName(TargetName)[0];
+			var ArrayOfValues = await getCategoryDeptValues(dataCSVGrouped, 4).then(async function (data){return data;});
+			ArrayOfValues[5] = ArrayOfValues[5].map(Number);
+			ArrayOfValues[6] = ArrayOfValues[6].map(Number);
+			setIndicators(ArrayOfValues[0], DataContainerElements.getElementsByClassName("goalMessage"), "number");
+			setIndicators(ArrayOfValues[1], DataContainerElements.getElementsByClassName("dataSectNumerator"), "number");
+			setIndicators(ArrayOfValues[2], DataContainerElements.getElementsByClassName("dataSectDenominator"), "number");
+			setIndicators(ArrayOfValues[3], DataContainerElements.getElementsByClassName("dataDescription"), "number");
+			setIndicators(ArrayOfValues[4], DataContainerElements.getElementsByClassName("timeDescription"), "number");
+			setIndicators(ArrayOfValues[6], DataContainerElements.getElementsByClassName("card-header"), "color", 2);
+			setIndicators(ArrayOfValues[5], DataContainerElements.getElementsByClassName("indicator"), "color", 3);	
+		} catch (error) {
+			console.log(error);
+		}
+	}
+}
 
 async function setDateData(url,TargetName){
-
-	var dateData =    await getData(url).then(async function(data) {return data;});
-	dateData = JSON.parse(dateData);
-	date = new Date(dateData[0].commit.author.date );
-	months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
-	dateYouWant =  ""+months[date.getMonth()]+" "+date.getDate();
-	var DataContainerElements = document.getElementsByName(TargetName)[0];
-	setIndicators(dateYouWant, DataContainerElements.getElementsByClassName("date"), "date");
-
-
+	if(url == null || TargetName == null ){
+		console.log("url, or TargetName are null. (setDateData)");
+	}
+	else{
+		try {
+			var dateData =    await getData(url).then(async function(data) {return data;});
+			var dateData = JSON.parse(dateData);
+			var date = new Date(dateData[0].commit.author.date );
+			var months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
+			var dateYouWant =  ""+months[date.getMonth()]+" "+date.getDate();
+			var DataContainerElements = document.getElementsByName(TargetName)[0];
+			setIndicators(dateYouWant, DataContainerElements.getElementsByClassName("date"), "date");
+		} catch (error) {
+			console.log(error);
+		}
+	}
 }
 
 //formats money
 function formatMoney(number) {
-	number = parseInt(number,10);
-	return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+	if(number == null){
+		console.log("number is null. (formatMoney)");
+	}
+	else{
+		try {
+			number = parseInt(number,10);
+			return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
   }
