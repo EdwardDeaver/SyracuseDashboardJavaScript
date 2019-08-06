@@ -1,5 +1,23 @@
 {
   "lastModifiedDate": "July 3000",
+  "index": {
+    "keyResult1": {
+      "key": "obj1",
+      "TargetName": "objective1"
+      },
+      "keyResult2": {
+      "key": "obj2",
+      "TargetName": "objective2"
+      },
+      "keyResult3": {
+        "key": "obj3",
+        "TargetName": "objective3"
+        },
+        "keyResult4": {
+        "key": "obj4",
+        "TargetName": "objective4"
+        }
+  },
   "objective1": {
     "keyResult1": {
       "key": "obj1kr1",

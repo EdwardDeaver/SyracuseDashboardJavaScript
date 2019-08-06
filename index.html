@@ -292,13 +292,14 @@
 	<script>
 		var date;
 			async function dataRun(){ 
+				var settings =  await getData('data/settings.json').then(async function(data) {return  JSON.parse(data);});   
 				var combinationData =   await getData('data/mainPageData.csv').then(async function(data) {return data;});
-				await generateKeyBoxResult("obj1", "objective1",combinationData);
-				await generateKeyBoxResult("obj2", "objective2",combinationData);
-				await generateKeyBoxResult("obj3", "objective3",combinationData);
-				await generateKeyBoxResult("obj4", "objective4",combinationData);
-				combinationData = 0;
-
+				await generateKeyBoxResult(settings.index.keyResult1.key, settings.index.keyResult1.TargetName,combinationData);
+				await generateKeyBoxResult(settings.index.keyResult2.key, settings.index.keyResult2.TargetName,combinationData);
+				await generateKeyBoxResult(settings.index.keyResult3.key, settings.index.keyResult3.TargetName,combinationData);
+				await generateKeyBoxResult(settings.index.keyResult4.key, settings.index.keyResult4.TargetName,combinationData);
+				var combinationData = 0;
+				var settings = 0;
 			};
 			dataRun();
 
