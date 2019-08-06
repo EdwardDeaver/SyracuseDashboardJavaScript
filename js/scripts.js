@@ -588,19 +588,15 @@ async function generateKeyBoxResult(key, TargetName, data)
 	}
 }
 
-async function setDateData(url,TargetName){
-	if(url == null || TargetName == null ){
-		console.log("url, or TargetName are null. (setDateData)");
+async function setDateData(date,TargetName){
+	if(date == null || TargetName == null ){
+		console.log("date, or TargetName are null. (setDateData)");
 	}
 	else{
 		try {
-			var dateData =    await getData(url).then(async function(data) {return data;});
-			var dateData = JSON.parse(dateData);
-			var date = new Date(dateData[0].commit.author.date );
-			var months = ["January", "February","March","April","May","June","July","Auguest","September","October","November","December"]
-			var dateYouWant =  ""+months[date.getMonth()]+" "+date.getDate();
+			
 			var DataContainerElements = document.getElementsByName(TargetName)[0];
-			setIndicators(dateYouWant, DataContainerElements.getElementsByClassName("date"), "date");
+			setIndicators(date, DataContainerElements.getElementsByClassName("date"), "date");
 		} catch (error) {
 			console.log(error);
 		}

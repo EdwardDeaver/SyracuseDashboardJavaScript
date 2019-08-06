@@ -867,13 +867,15 @@
 
 	<script>
 			async function dataRun(){ 
+				var settings =  await getData('data/settings.json').then(async function(data) {return  JSON.parse(data);});
 				var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
             	var keyResultBanner =  await getData('data/keyResultBannerData.csv').then(async function(data) {return data;});
-            	var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
-				await generateKeyResult('obj1kr1', "keyResult1", 2, 1,  combinationData, keyResultBanner, combinedPercentData,0,[50,97]);
+				var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
 				var keyResult2Data = await getData('data/FiscalObjective2.csv').then(async function(data){return data;});
-				await generateKeyResult('obj1kr2', "keyResult2", 3, 1,  combinationData, keyResultBanner, keyResult2Data,1,[50,97]);
-				await setDateData("https://api.github.com/repos/EdwardDeaver/SyracuseDashboardJavaScript/commits?path=data/combined_data_v4.csv&page=1&per_page=1","keyResult2");
+				await generateKeyResult(settings.objective1.keyResult1.key, settings.objective1.keyResult1.TargetName, settings.objective1.keyResult1.mode, settings.objective1.keyResult1.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective1.keyResult1.money,settings.objective1.keyResult1.indicatorRange);
+				await generateKeyResult(settings.objective1.keyResult2.key, settings.objective1.keyResult2.TargetName, settings.objective1.keyResult2.mode, settings.objective1.keyResult2.keyMode,  combinationData, keyResultBanner, keyResult2Data,settings.objective1.keyResult2.money,settings.objective1.keyResult2.indicatorRange);
+				await setDateData(settings.lastModifiedDate,"keyResult2");
+				var settings = 0;
 				var combinationData = 0;
 				var	keyResultBanner = 0;
 				var combinedPercentData = 0;
