@@ -450,10 +450,10 @@
 
 	<script>
         async function dataRun(){
-            var settings =  await getData('/data/settings.json').then(async function(data) {return  JSON.parse(data);});   
-            var combinationData =   await getData('/data/combined_data_v4.csv').then(async function(data) {return data;});
-            var keyResultBanner =  await getData('/data/keyResultBannerData.csv').then(async function(data) {return data;});
-            var combinedPercentData = await getData('/data/combined_percentage_data.csv').then(async function(data){return data;});
+            var settings =  await getData('data/settings.json').then(async function(data) {return  JSON.parse(data);});   
+            var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
+            var keyResultBanner =  await getData('data/keyResultBannerData.csv').then(async function(data) {return data;});
+            var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
             await generateKeyResult(settings.objective4.keyResult1.key, settings.objective4.keyResult1.TargetName, settings.objective4.keyResult1.mode,settings.objective4.keyResult1.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective4.keyResult1.money,settings.objective4.keyResult1.indicatorRange);
             await generateKeyResult(settings.objective4.keyResult2.key, settings.objective4.keyResult2.TargetName, settings.objective4.keyResult2.mode,settings.objective4.keyResult2.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective4.keyResult2.money,settings.objective4.keyResult2.indicatorRange);
             var combinationData = 0;
@@ -465,7 +465,7 @@
 
 </script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
-		<script src="/js/scrolling.min.js"></script>
+		<script src="js/scrolling.min.js"></script>
 
     </body>
     </html>
