@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>Objective: Increase economic investment and neighborhood stability</title><!-- Custom CSS-->
-	<link href="css/style.min.css" rel="stylesheet"><!-- Bootstrap -->
+	<link href="/css/style.min.css" rel="stylesheet"><!-- Bootstrap -->
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- font awesome-->
@@ -37,26 +37,26 @@
 	<script src="https://d3js.org/d3-array.v2.min.js">
 	</script> <!-- CUSTOM SCRIPTS-->
 	 
-	<script src="js/scripts.min.js">
+	<script src="/js/scripts.min.js">
 	</script> <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.html">City of Syracuse <i class="fas fa-chart-line"></i></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<a class="navbar-brand" href="/index.html">City of Syracuse <i class="fas fa-chart-line"></i></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="objective1.html">Fiscal Sustainability <i class="fas fa-hand-holding-usd"></i></a>
+					<a class="nav-link" href="/objective1.html">Fiscal Sustainability <i class="fas fa-hand-holding-usd"></i></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="objective2.html">Neighborhood Stability <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="/objective2.html">Neighborhood Stability <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" href="objective3.html">Constituent Engagement <i class="fas fa-comments"></i></a>
+					<a class="nav-link" href="/objective3.html">Constituent Engagement <i class="fas fa-comments"></i></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="objective4.html">City Services <i class="fas fa-screwdriver"></i></a>
+					<a class="nav-link" href="/objective4.html">City Services <i class="fas fa-screwdriver"></i></a>
 				</li>
 				<li class="nav-item">
-                        <a class="nav-link" href="keyterms.html">Key Terms <i class="fas fa-book-open"></i></a>
+                        <a class="nav-link" href="/keyterms.html">Key Terms <i class="fas fa-book-open"></i></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="https://innovatesyracuse.com/performance" target="_blank">Successes <i class="far fa-thumbs-up success"></i></a>
@@ -325,10 +325,10 @@ period ending <span class="date"></span>: <span class="category-title"><span cla
 
 	<script>
 		async function dataRun(){
-			var settings =  await getData('data/settings.json').then(async function(data) {return  JSON.parse(data);}); 
-			var combinationData =   await getData('data/combined_data_v4.csv').then(async function(data) {return data;});
-			var keyResultBanner =  await getData('data/keyResultBannerData.csv').then(async function(data) {return data;});
-			var combinedPercentData = await getData('data/combined_percentage_data.csv').then(async function(data){return data;});
+			var settings =  await getData('/data/settings.json').then(async function(data) {return  JSON.parse(data);}); 
+			var combinationData =   await getData('/data/combined_data_v4.csv').then(async function(data) {return data;});
+			var keyResultBanner =  await getData('/data/keyResultBannerData.csv').then(async function(data) {return data;});
+			var combinedPercentData = await getData('/data/combined_percentage_data.csv').then(async function(data){return data;});
 			await generateKeyResult(settings.objective2.keyResult1.key, settings.objective2.keyResult1.TargetName, settings.objective2.keyResult1.mode,settings.objective2.keyResult1.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective2.keyResult1.money,settings.objective2.keyResult1.indicatorRange);
 			await generateKeyResult(settings.objective2.keyResult2.key, settings.objective2.keyResult2.TargetName, settings.objective2.keyResult2.mode,settings.objective2.keyResult2.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective2.keyResult2.money,settings.objective2.keyResult2.indicatorRange);
 			await generateKeyResult(settings.objective2.keyResult3.key, settings.objective2.keyResult3.TargetName, settings.objective2.keyResult3.mode,settings.objective2.keyResult3.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective2.keyResult3.money,settings.objective2.keyResult3.indicatorRange);
@@ -344,7 +344,7 @@ period ending <span class="date"></span>: <span class="category-title"><span cla
 
 </script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
-		<script src="js/scrolling.min.js"></script>
+		<script src="/js/scrolling.min.js"></script>
 
 </body>
 </html>
