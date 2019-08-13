@@ -91,8 +91,9 @@
 	text-align: center;
 }
 
-#jumbotronbg {
-	background-color: #3c2d5a;
+.jumbotronbg {
+	background-color: #3c2d5a !important;
+	color: white;
 }
 
 #mapid {
@@ -268,10 +269,10 @@ table.myTable tr {
   font-style: italic;
 }
 .active{
-	border-bottom:1px solid #000000 ;
+	border-bottom:1px solid white ;
   }
 nav div ul .active{
-  border-bottom:1px solid #000000 ;
+  border-bottom:1px solid  white ;
 }
 
 /* Scroll CSS sourced from https://codepen.io/joshuamasen/pen/OYaYbL */
@@ -340,4 +341,8 @@ nav div ul .active{
 	color: #444;
 	font-size: 1em;
 	clip: auto !important;
+  }
+
+  .textColor a{
+	 color:white !important;
   }
