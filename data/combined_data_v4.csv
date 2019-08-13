@@ -321,6 +321,67 @@
 "214","obj1kr2",12,"Water_combined","budget variance",-20
 
 
+
+"119","obj1kr3",1,"DPWProjects","budget variance",-45
+"120","obj1kr3",2,"DPWProjects","budget variance",-8
+"121","obj1kr3",3,"DPWProjects","budget variance",-10
+"122","obj1kr3",4,"DPWProjects","budget variance",12
+"123","obj1kr3",5,"DPWProjects","budget variance",-5
+"124","obj1kr3",6,"DPWProjects","budget variance",-17
+"125","obj1kr3",7,"DPWProjects","budget variance",-7
+"126","obj1kr3",8,"DPWProjects","budget variance",-2
+"127","obj1kr3",9,"DPWProjects","budget variance",-6
+"128","obj1kr3",10,"DPWProjects","budget variance",-2
+"129","obj1kr3",11,"DPWProjects","budget variance",5
+"130","obj1kr3",12,"DPWProjects","budget variance",-19
+"131","obj1kr3",1,"EngineeringProjects","budget variance",-19
+"132","obj1kr3",2,"EngineeringProjects","budget variance",-33
+"133","obj1kr3",3,"EngineeringProjects","budget variance",-13
+"134","obj1kr3",4,"EngineeringProjects","budget variance",15
+"135","obj1kr3",5,"EngineeringProjects","budget variance",-16
+"136","obj1kr3",6,"EngineeringProjects","budget variance",-11
+"137","obj1kr3",7,"EngineeringProjects","budget variance",10
+"138","obj1kr3",8,"EngineeringProjects","budget variance",3
+"139","obj1kr3",9,"EngineeringProjects","budget variance",44
+"131","obj1kr3",1,"GeneralCityProjects","budget variance",-19
+"132","obj1kr3",2,"GeneralCityProjects","budget variance",-33
+"133","obj1kr3",3,"GeneralCityProjects","budget variance",-13
+"134","obj1kr3",4,"GeneralCityProjects","budget variance",15
+"135","obj1kr3",5,"GeneralCityProjects","budget variance",-16
+"136","obj1kr3",6,"GeneralCityProjects","budget variance",-11
+"137","obj1kr3",7,"GeneralCityProjects","budget variance",10
+"138","obj1kr3",8,"GeneralCityProjects","budget variance",3
+"139","obj1kr3",9,"GeneralCityProjects","budget variance",44
+"140","obj1kr3",10,"PoliceProjects","budget variance",53
+"141","obj1kr3",11,"PoliceProjects","budget variance",12
+"142","obj1kr3",12,"PoliceProjects","budget variance",-14
+"143","obj1kr3",1,"ParksDeptProjects","budget variance",-22
+"144","obj1kr3",2,"ParksDeptProjects","budget variance",-22
+"145","obj1kr3",3,"ParksDeptProjects","budget variance",-7
+"146","obj1kr3",4,"ParksDeptProjects","budget variance",10
+"147","obj1kr3",5,"ParksDeptProjects","budget variance",1
+"148","obj1kr3",6,"ParksDeptProjects","budget variance",4
+"149","obj1kr3",7,"ParksDeptProjects","budget variance",0
+"150","obj1kr3",8,"ParksDeptProjects","budget variance",12
+"151","obj1kr3",9,"ParksDeptProjects","budget variance",-3
+"152","obj1kr3",10,"FireDeptProjects","budget variance",-8
+"153","obj1kr3",11,"FireDeptProjects","budget variance",-2
+"154","obj1kr3",12,"FireDeptProjects","budget variance",-7
+"155","obj1kr3",1,"WaterDeptProjects","budget variance",-17
+"156","obj1kr3",2,"WaterDeptProjects","budget variance",-3
+"157","obj1kr3",3,"WaterDeptProjects","budget variance",7
+"158","obj1kr3",4,"WaterDeptProjects","budget variance",13
+"159","obj1kr3",5,"WaterDeptProjects","budget variance",10
+"160","obj1kr3",6,"WaterDeptProjects","budget variance",-6
+"161","obj1kr3",7,"WaterDeptProjects","budget variance",-7
+"162","obj1kr3",8,"WaterDeptProjects","budget variance",-3
+"163","obj1kr3",9,"WaterDeptProjects","budget variance",-7
+"164","obj1kr3",10,"SewerProjects","budget variance",5
+"165","obj1kr3",11,"SewerProjects","budget variance",7
+"166","obj1kr3",12,"SewerProjects","budget variance",-10
+
+
+
 "215","obj2kr1",1557115200,"comm reno","approved in time",50
 "216","obj2kr1",1557720000,"comm reno","approved in time",58
 "217","obj2kr1",1557720000,"comm reno","approved in time",58

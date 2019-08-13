@@ -220,8 +220,8 @@
 			await generateKeyResult(settings.objective3.keyResult1.key, settings.objective3.keyResult1.TargetName,  settings.objective3.keyResult1.mode,settings.objective3.keyResult1.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective3.keyResult1.money,settings.objective3.keyResult1.indicatorRange);
 			await generateKeyResult(settings.objective3.keyResult2.key, settings.objective3.keyResult2.TargetName,  settings.objective3.keyResult2.mode,settings.objective3.keyResult2.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective3.keyResult2.money,settings.objective3.keyResult2.indicatorRange);
 			await generateKeyResult(settings.objective3.keyResult3.key, settings.objective3.keyResult3.TargetName,  settings.objective3.keyResult3.mode,settings.objective3.keyResult3.keyMode,  combinationData, keyResultBanner, combinedPercentData,settings.objective3.keyResult3.money,settings.objective3.keyResult3.indicatorRange);
-			await setDateData(settings.lastModifiedDate,"keyResult2");
-			await setDateData(settings.lastModifiedDate,"keyResult3");
+			await setDateData(settings.objective3.keyResult2.lastModifiedDate,"keyResult2");
+			await setDateData(settings.objective3.keyResult3.lastModifiedDate,"keyResult3");
 			var settings = 0;
 			var combinationData = 0;
 			var keyResultBanner = 0;
